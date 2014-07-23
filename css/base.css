@@ -23,7 +23,13 @@
 	border-width: 1px;
 	font-family: Verdan, sans-serif;
 	}
+
+a.nav {
+	text-decoration: none;
+	color: black;
+	}
 		
 a.nav:hover {
-	text-decoration:underline;
+	text-decoration: underline;
+	color: black;
 	}
