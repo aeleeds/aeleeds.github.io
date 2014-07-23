@@ -1,9 +1,9 @@
 body {
-	background-color: gray;
+	background-color: #E6E6E6;
 }
 
 #main {
-	background-color: #E6E6E6;
+	background-color: white;
 	position:fixed;
 	width: 500px;
 	top: 200px;
