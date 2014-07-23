@@ -4,18 +4,11 @@
 <link rel="stylesheet" type="text/css" href="css/base.css">
 </head>
 <body>
-<script type="text/javascript">
-function toggle_visibility(id) {
-   var e = document.getElementById(id);
-   if(e.style.display == 'block')
-      e.style.display = 'none';
-   else
-      e.style.display = 'block';
-}
-</script>
+<script src="scripts/main.js"></script>
+
 <div id="main">
 	<div id="navigation">
-		<a class="nav" onclick="toggle_vissibility('about');" href="">About</a> | <a class="nav" onclick="toggle_vissibility('research');" href="">Research</a> | <a class="nav" onclick="toggle_vissibility('cv');" href="">Curriculum Vitae</a>
+		<a class="nav" onclick="toggle_visibility('about');" href="">About</a> | <a class="nav" onclick="toggle_visibility('research');" href="">Research</a> | <a class="nav" onclick="toggle_visibility('cv');" href="">Curriculum Vitae</a>
 	</div>
 	<div id="about">
 		About
