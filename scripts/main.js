@@ -1,7 +1,11 @@
-function toggle_visibility(id) {
-   var e = document.getElementById(id);
-   if(e.style.display == 'block')
-      e.style.display = 'none';
-   else
-      e.style.display = 'block';
+function toggle_visibility(thechosenone) {
+     $('.content').each(function(index) {
+          if ($(this).attr("id") == thechosenone) {
+               $(this).show(200);
+          }
+          else {
+               $(this).hide();
+          }
+     });
+}
 }
