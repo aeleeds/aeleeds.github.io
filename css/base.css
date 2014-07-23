@@ -1,4 +1,9 @@
+body {
+	background-color: gray;
+}
+
 #main {
+	background-color: white;
 	position:fixed;
 	width: 500px;
 	top: 200px;
