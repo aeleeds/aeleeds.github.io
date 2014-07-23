@@ -42,4 +42,5 @@ a.nav:hover {
 	text-decoration: underline;
 	color: black;
 	font-weight: 600;
+	border-bottom: 4px solid black;
 	}
