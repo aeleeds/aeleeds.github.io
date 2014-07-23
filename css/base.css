@@ -8,8 +8,8 @@ body {
 	width: 500px;
 	top: 200px;
 	left: 200px;
-	margin: 3px;
-	padding: 3px;
+	margin: 0px;
+	padding: 0px;
 	border-style: solid;
 	border-color: gray;
 	border-width: 1px;
@@ -45,6 +45,10 @@ a.nav:hover {
 	border-bottom: 4px solid #59ACFF;
 	}
 	
+div.content {
+	margin: 3px;
+}
+
 #cv {
 	display: none;
 }
