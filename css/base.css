@@ -32,13 +32,13 @@ body {
 	font-size: 0.9em;
 	}
 
-span.nav {
+a.nav {
 	text-decoration: none;
 	color: black;
 	font-weight: 600;
 	}
 		
-span.nav:hover {
+a.nav:hover {
 	text-decoration: underline;
 	color: black;
 	font-weight: 600;
