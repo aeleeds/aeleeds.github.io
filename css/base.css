@@ -8,7 +8,7 @@ body {
 	width: 500px;
 	top: 200px;
 	left: 200px;
-	margin: 2px;
+	margin: 0px;
 	padding: 0px;
 	border-style: solid;
 	border-color: gray;
@@ -18,7 +18,7 @@ body {
 		
 #navigation {
 	position: relative;
-	width: 95%;
+	width: 496;
 	margin: 2px;
 	padding: 0px;
 	clear: both;
