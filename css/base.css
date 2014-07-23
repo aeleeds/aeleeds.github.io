@@ -18,10 +18,9 @@ body {
 		
 #navigation {
 	position: relative;
-	width: 488px;
+	width: 100%;
 	margin: 3px;
 	padding: 3px;
-	clear: both;
 	border-style: dotted;
 	border-color: gray;
 	border-width: 1px;
