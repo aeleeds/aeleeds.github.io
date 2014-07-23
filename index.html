@@ -2,13 +2,30 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="css/base.css">
+<script type="text/javascript">
+function toggle_visibility(id) {
+   var e = document.getElementById(id);
+   if(e.style.display == 'block')
+      e.style.display = 'none';
+   else
+      e.style.display = 'block';
+}
+</script>
 </head>
 <body>
 <div id="main">
 <div id="navigation">
-<a class="nav" href="">About</a> | <a class="nav" href="">Research</a> | <a class="nav" href="">Curriculum Vitae</a>
+	<a class="nav" onclick="toggle_vissibility('about');" href="">About</a> | <a class="nav" onclick="toggle_vissibility('research');" href="">Research</a> | <a class="nav" onclick="toggle_vissibility('cv');" href="">Curriculum Vitae</a>
 </div>
-Main text
+<div id="about">
+About
+</div>
+<div id="research">
+Research
+</div>
+<div id="cv">
+CV
+</div>
 </div>
 </body>
 </html>
