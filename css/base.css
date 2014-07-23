@@ -1,4 +1,17 @@
 #main {
-		margin-left: 20px;
-		text-align: center;
+		position:fixed
+		width: 500px;
+		top: 200px;
+		left: 200px;
+		border-style: solid;
+		border-color: gray;
+		}
+		
+#navigation {
+		width: 100%;
+		text-align: justify;
+		text-transform: uppercase;
+		border-style: dotted;
+		border-color: gray;
+		font-family: Verdan, sans-serif;
 		}
