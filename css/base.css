@@ -3,7 +3,9 @@ body {
 }
 
 #main {
+	box-sizing: border-box;
 	background-color: white;
+	overflow: hidden; 
 	position:fixed;
 	width: 500px;
 	top: 200px;
@@ -17,8 +19,9 @@ body {
 	}
 		
 #navigation {
+	box-sizing: border-box;
 	position: relative;
-	width: 488px;
+	width: 100%;
 	margin: 3px;
 	padding: 3px;
 	clear: both;
@@ -46,6 +49,7 @@ a.nav:hover {
 	}
 	
 div.content {
+	box-sizing: border-box;
 	margin: 3px;
 }
 
