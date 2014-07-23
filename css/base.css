@@ -14,8 +14,8 @@
 #navigation {
 	position: relative;
 	width: 100%;
-	margin: 2px;
-	padding: 0px;
+	margin: 0px;
+	padding: 2px;
 	clear: both;
 	border-style: dotted;
 	border-color: gray;
