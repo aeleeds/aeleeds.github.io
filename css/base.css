@@ -8,7 +8,7 @@ body {
 	width: 500px;
 	top: 200px;
 	left: 200px;
-	margin: 0px;
+	margin: 2px;
 	padding: 0px;
 	border-style: solid;
 	border-color: gray;
@@ -18,8 +18,8 @@ body {
 		
 #navigation {
 	position: relative;
-	width: 100%;
-	margin: 0px;
+	width: 95%;
+	margin: 2px;
 	padding: 0px;
 	clear: both;
 	border-style: dotted;
