@@ -10,7 +10,7 @@ body {
 	width: 600px;
 	left: 50%;
 	margin-left: -300px;
-    top: 50px;
+  	top: 50px;
 	padding: 0px;
 	border-style: solid;
 	border-color: gray;
@@ -21,7 +21,7 @@ body {
 #navigation {
 	box-sizing: border-box;
 	position: relative;
-	width: 100%;
+	width: 592px;
 	margin: 3px;
 	padding: 3px;
 	clear: both;
