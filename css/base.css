@@ -69,12 +69,13 @@ div.content {
 
 .cv_heading {
 	box-sizing: border-box;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	padding-top: 1em;
+	padding-bottom: 1em;
 	text-transform: uppercase;
 	font-size: 0.9em;
 	font-weight: 600;
 	clear: both;
+	overflow:auto;
 }
 
 .cv_heading:first-letter {
@@ -90,7 +91,16 @@ table.cv_date_list {
 	vertical-align: top;
 }
 
-tr.cv_date_list {
-	margin-bottom: 5px;
+table.cv_date_list tr {
+}
+
+table.cv_date_list tr td:nth-child(1) {
 	vertical-align: top;
+	width: 15%;
+	padding-bottom: 1em;
+}
+
+table.cv_date_list tr td:nth-child(2) {
+	width: 85%;
+	padding-bottom: 1em;
 }
