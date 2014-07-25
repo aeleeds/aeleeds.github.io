@@ -1,18 +1,19 @@
 body {
 	background-color: #E6E6E6;
-	overflow:auto;
+	margin:0px;
+	padding:0px;
 }
 
 #main {
 	box-sizing: border-box;
 	background-color: white;
-	overflow: auto; 
-	position:fixed;
-	width: 600px;
+	overflow: hidden; 
+	position: relative;
 	left: 50%;
 	margin-left: -300px;
-  	top: 25px;
+  	margin-top: 25px;
 	padding: 0px;
+	width: 600px;
 	border-style: solid;
 	border-color: gray;
 	border-width: 1px;
@@ -91,4 +92,5 @@ table.cv_date_list {
 
 tr.cv_date_list {
 	margin-bottom: 5px;
+	vertical-align: top;
 }
