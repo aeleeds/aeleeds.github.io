@@ -36,6 +36,17 @@ body {
 	letter-spacing: 2px;
 	font-size: 0.9em;
 	}
+	
+div.content a {
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px dotted gray;
+}
+div.content a:hover {
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px dotted #59ACFF;
+}
 
 a.nav {
 	text-decoration: none;
@@ -49,10 +60,11 @@ a.nav:hover {
 	font-weight: 600;
 	border-bottom: 4px solid #59ACFF;
 	}
-	
+
 div.content {
 	box-sizing: border-box;
 	padding: 12px;
+	text-align: justify;
 }
 
 #cv {

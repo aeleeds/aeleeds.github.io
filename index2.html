@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta content="text/html; charset=UTF-8" http-equiv="content-type"></meta>
 <link rel="stylesheet" type="text/css" href="css/base.css">
+<script type="text/javascript" src="scripts/main.js"></script>
+<script type="text/javascript" src="scripts/jquery-2.1.0.min.js"></script>
+<script type="text/javascript" src="scripts/slider.js"></script>
 </head>
 <body>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
-<script type="text/javascript" src="scripts/main.js"></script>
-<script type="text/javascript" src="scripts/slider.js"></script>
-
-<script>
-	jQuery(document).ready(function ($) {
-		var options = {
-                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
-                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
-                $AutoPlayInterval: 2500,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
-                $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 1
-
-            };
-		var jssor_slider1 = new $JssorSlider$("slider1_container", options);
-	});
-</script>
-    
 <div id="main">
     <script>
-
         jssor_slider1_starter = function (containerId) {
+        	var _SlideshowTransitions = [
+            //Fade
+            { $Duration: 2200, $Opacity: 2 }
+            ];
+    
             var options = {
                 $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
                 $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
                 $AutoPlayInterval: 3000, 
                 $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
-
+              	
+              	$SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+                },
+                
                 $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
                     $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
                     $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
@@ -41,16 +39,14 @@
                     $SpacingX: 0,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
                     $SpacingY: 0,                                   //[Optional] Vertical space between each item in pixel, default value is 0
                     $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
-                }
+               }
             };
             var jssor_slider1 = new $JssorSlider$(containerId, options);
         };
     </script>
     <!-- Jssor Slider Begin -->
     <!-- You can move inline styles to css file or css block. -->
-    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px;
-        height: 300px;">
-
+    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
         <!-- Loading Screen -->
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
@@ -60,7 +56,6 @@
                 top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
         </div>
-
         <!-- Slides Container -->
         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
             overflow: hidden;">
@@ -99,7 +94,7 @@
         </style>
         <!-- bullet navigator container -->
         <div u="navigator" class="jssorb03" style="position: absolute; bottom: 4px; left: 6px;">
-            <!-- bullet navigator item prototype; Add "<NumberTemplate></NumberTemplate>" in the next dive for numbers-->
+            <!-- bullet navigator item prototype; Add "<NumberTemplate></NumberTemplate>" in the next line for numbers-->
             <div u="prototype" style="position: absolute; width: 21px; height: 21px; text-align:center; line-height:21px; color:white; font-size:7px;"></div>
         </div>
         <!-- Bullet Navigator Skin End -->
@@ -117,10 +112,10 @@
 	<div id="about" class="content">
 		I am an anthropologist concerned with political rationalities and technologies of government. In particular, I am interested in the imagination and assembly of forms of political order that could be understood as liberalisms by means of the forms of knowledge called economics. My current project is a historical ethnography of the economists of Moscow in the Soviet Union and contemporary Russia, who figure as key agents in the elaboration of alternative liberalisms and socialisms in the modern political imaginary.<br/>
 		<br/>
-		Currently I am a doctoral candidate at the University of Pennsylvania, and a Predoctoral Fellow at the Center for the History of Political Economy at Duke University.
+		Currently I am a doctoral candidate in the <a href="http://www.sas.upenn.edu/anthropology/">Depart of Anthropology</a> of the <a href="http://www.sas.upenn.edu">University of Pennsylvania</a>, and a Predoctoral Fellow at the <a href="http://hope.econ.duke.edu/">Center for the History of Political Economy</a> at <a href="http://www.duke.edu">Duke University</a>.
 		<div class="cv_heading">Contact Information</div>
 		<div class="cv_section">
-			<table columns="2" style="borders: 0px; width: 100%">
+			<table columns="2" style="border: 0px; width: 100%">
 				<tr>
 					<td style="width:50%;">University Museum Room 325</td><td style="width:50%;">914.980.2970</td>
 				</tr>
@@ -153,7 +148,7 @@
 		<div class="cv_section">
 			University of Pennsylvania, Philadelphia PA<br/>
 			Ph. D. in Anthropology, currently enrolled
-			<table columns="2" style="borders: 0px; margin-top: 0px; margin-bottom:5px;">
+			<table columns="2" style="border: 0px; margin-top: 0px; margin-bottom:5px;">
 				<tr>
 					<td style="width:30%; text-align:right; vertical-align:top;">Dissertation:</td><td style="width:70%">Spectral Liberalisms: On the Subjects of Political Economy, Moscow, 1956-2012</td>
 				</tr>
@@ -220,38 +215,46 @@
 				</tr>
 			</table>
 		</div>
+		<div class="cv_heading">Publications</div>
+		<div class="cv_section">
+			<table class="cv_date_list">
+				<tr>	
+						<td>n.d.</td>	<td>“Dreams in Cybernetic Fugue: Cold War Technoscience, the Intelligentsia, and the Birth of Soviet Mathematical Economics,” <i>Historical Studies in the Natural Sciences<i/> (under review).</td>
+				</tr>
+			</table>
+		</div>
 		<div class="cv_heading">Lectures and Presentations</div>
 		<div class="cv_section">
 			<table class="cv_date_list">
 				<tr>
-						<td>2014	</td><td>"Mobilizing a Universal Technology: IMF Financial Programming and the Legibility of the Russian Economy in Transition," 113th Annual Meeting of the American Anthropological Association,  20-24 November, 2013. (Organizer of panel, "Figuring Expert and Everyday Economies: Representations/Interventions," sponsored by the Society for Economic Anthropology.)</td>
+						<td>2014	</td><td>"Mobilizing a Universal Technology: IMF Financial Programming and the Legibility of the Russian Economy in Transition," 113th Annual Meeting of the <i>American Anthropological Association</i>,  20-24 November, 2013. (Organizer of panel, "Figuring Expert and Everyday Economies: Representations/Interventions," sponsored by the Society for Economic Anthropology.)</td>
 				</tr>
 				<tr>			
-						<td>2014	</td><td>"The Fractured Field: Power and Economic Expertise in the Russian Government across Two Decades of Crisis,"  39th Annual Meeting of the Social Science History Association, 6-9 November 2014.</td>
+						<td>2014	</td><td>"The Fractured Field: Power and Economic Expertise in the Russian Government across Two Decades of Crisis,"  39th Annual Meeting of the <i>Social Science History Association</i>, 6-9 November 2014.</td>
 				</tr>
 				<tr>			
-						<td>2014	</td><td>"Post-Soviet Russian liberalism in search of its futures past," 21st Annual Meeting of the Council for European Studies, 14-16 March 2014</td>
+						<td>2014	</td><td>"Post-Soviet Russian liberalism in search of its futures past," 21st Annual Meeting of the <i>Council for European Studies</i>, 14-16 March 2014</td>
 				</tr>
 				<tr>				
-						<td>2014 </td><td>"Towards computopia: Mathematicians, Cold War science, and the (re)birth of 'economic cybernetics' in the Soviet Union," Mathematical Superpowers: The Politics of Universality in a Divided World, at New York University, 27-28 February 2014.</td>
+						<td>2014 	</td><td>"Towards computopia: Mathematicians, Cold War science, and the (re)birth of 'economic cybernetics' in the Soviet Union," Mathematical Superpowers: The Politics of Universality in a Divided World, at <i>New York University</i>, 27-28 February 2014.</td>
 				</tr>
 				<tr>				
-						<td>2013	</td><td>"On the political economy of non-democracies: Second-order theory of Russia's transition to capitalism," 112th Annual Meeting of the American Anthropological Association,  20-24 November, 2013. (Organizer of panel, "Technopolitical Futures," sponsored by the Association for Political and Legal Anthropology.)</td>
+						<td>2013	</td><td>"On the political economy of non-democracies: Second-order theory of Russia's transition to capitalism," 112th Annual Meeting of the <i>American Anthropological Association</i>,  20-24 November, 2013. (Organizer of panel, "Technopolitical Futures," sponsored by the Association for Political and Legal Anthropology.)</td>
 				</tr>
 				<tr>				
-						<td>2013	</td><td>"First contact: Soviet and American economists at the beginning of the end of the Soviet economy," 38th Annual Meeting of the Social Science History Association, 21-4 November 2013.</td>
+						<td>2013	</td><td>"First contact: Soviet and American economists at the beginning of the end of the Soviet economy," 38th Annual Meeting of the <i>Social Science History Association</i>, 21-4 November 2013.</td>
 				</tr>
 				<tr>			
-						<td>2013	</td><td>"An impossible science? How hydroelectric engineers, cyberneticists, Orthodox mystics, transport planners, rocket scientists, Stalin, etc., assembled Soviet economics, again,"  Department of Anthropology, University of Pennsylvania, September 2013.</td>
+						<td>2013	</td><td>"An impossible science? How hydroelectric engineers, cyberneticists, Orthodox mystics, transport planners, rocket scientists, Stalin, etc., assembled Soviet economics, again,"  Department of Anthropology, <i>University of Pennsylvania</i>, September 2013.</td>
 				</tr>
 				<tr>			
-						<td>2012	</td><td>"Descent from Snake Mountain: On the contexts and content of late Soviet economics," 44th Annual Convention of the Association for Slavic, East European and Eurasian Studies, 15-18 November, 2012.</td>
+						<td>2012	</td><td>"Descent from Snake Mountain: On the contexts and content of late Soviet economics," 44th Annual Convention of the <i>Association for Slavic, East European and Eurasian Studies</i>, 15-18 November, 2012.</td>
 				</tr>
 				<tr>			
-						<td>2012	</td><td>"Fragments for a history of economics in Russia, 1958-2012," Invited lecture at the Baltic International Centre for Economical Policy Studies, 21 June, 2012. </td>
+						<td>2012	</td><td>"Fragments for a history of economics in Russia, 1958-2012," Invited lecture at the <i>Baltic International Centre for Economical Policy Studies</i>, 21 June, 2012. </td>
 				</tr>
 				<tr>			
-						<td>2012	</td><td>"Political economy in the think tank," 16th Annual Conference of the European Society for the History of Economic Thought, 17-19 May, 2012.</td>
+						<td>2012	</td><td>"Political economy in the think tank," 16th Annual Conference of the <i>European Society for the History of Economic Thought</i>, 17-19 May, 2012.</td>
 				</tr>
 			</table>
 		</div>
@@ -280,18 +283,12 @@
 			American Anthropological Association, 2005-present<br/>
 				&nbsp;&nbsp;&nbsp;&nbsp;Association for Political and Legal Anthropology<br/>
 				&nbsp;&nbsp;&nbsp;&nbsp;Society for Cultural Anthropology<br/>
-				&nbsp;&nbsp;&nbsp;&nbsp;Soyuz: Post-Communist Cultural Studies Interest Group
-			<br/>			<br/>
-
-
-			Social Science History Association, 2013-present
-			<br/>			<br/>
-
-
-			Association for Slavic, Eastern European, and Eurasian Studies, 2012-present
-			<br/>			<br/>
-
-
+				&nbsp;&nbsp;&nbsp;&nbsp;Soyuz: Post-Communist Cultural Studies Interest Group<br/>			
+			<br/>
+			Social Science History Association, 2013-present<br/>
+			<br/>
+			Association for Slavic, Eastern European, and Eurasian Studies, 2012-present<br/>			
+			<br/>
 			European Society for the History of Economic Thought, 2012-present
 		</div>
 		<div class="cv_heading">LANGUAGES</div>
