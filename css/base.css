@@ -83,6 +83,18 @@ a.nav:hover {
 	border-bottom: 4px solid #59ACFF;
 	}
 
+div#cv a {
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px dotted gray;
+}
+
+div#cv a:hover {
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px dotted #59ACFF;
+}
+
 #cv {
 	display: none;
 	line-height: normal;
