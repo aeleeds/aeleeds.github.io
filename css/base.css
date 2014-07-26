@@ -19,6 +19,12 @@ body {
 	border-width: 1px;
 	font-family: Verdana, sans-serif;
 	}
+	
+a {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+}
 
 /**************** nav  ****************/
 
@@ -131,6 +137,31 @@ div#cv a:hover:after{
 	border-bottom: 2px solid #59ACFF;
 }
 
+/*a.download_link {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	}
+	
+a.download_link:after {
+	content:'';
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:10px;
+	border-bottom: 2px dotted gray;
+}
+
+a.download_link:hover:after{
+    content:'';
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:10px;
+	border-bottom: 2px solid #59ACFF;
+}
+*/
 /*************** main blocks ************/
 
 div.content {
