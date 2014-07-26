@@ -52,17 +52,28 @@ body {
 	
 /* nav links */
 a.nav {
+	position: relative;
+	display: inline-block;
 	text-decoration: none;
 	color: black;
 	font-weight: 600;
 	}
-		
-a.nav:hover {
+
+a.nav:hover:after{
+    content:'';
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-2px;
+	border-bottom: 3px solid #59ACFF;
+}
+	
+/*a.nav:hover {
 	text-decoration: underline;
 	color: black;
 	font-weight: 600;
 	border-bottom: 4px solid #59ACFF;
-	}
+	}*/
 
 div.content {
 	box-sizing: border-box;
