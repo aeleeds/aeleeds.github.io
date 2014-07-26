@@ -20,6 +20,8 @@ body {
 	font-family: Verdana, sans-serif;
 	}
 
+/**************** nav  ****************/
+
 #adamleeds {
 	box-sizing: border-box;
 	margin-left: auto;
@@ -50,7 +52,8 @@ body {
 	font-size: 0.9em;
 	}
 	
-/* nav links */
+/**************** nav links ****************/
+
 a.nav {
 	position: relative;
 	display: inline-block;
@@ -81,16 +84,7 @@ a.nav:hover:after{
 	border-bottom: 3px solid #59ACFF;
 	}*/
 	
-div.content {
-	box-sizing: border-box;
-	padding: 12px;
-	padding-top: 5px;
-	text-align: justify;
-	font-size: 0.9em;
-	line-height: 170%;
-}
-
-/* links in the content block, except CV*/
+/**************** links in the content block, except CV ****************/
 
 div.content a {
 	position: relative;
@@ -117,7 +111,8 @@ div.content a:hover:after{
 	border-bottom: 2px solid #59ACFF;
 }
 
-/* CV links */
+/**************** CV links ****************/
+
 div#cv a:after {
 	content:'';
     position:absolute;
@@ -136,6 +131,18 @@ div#cv a:hover:after{
 	border-bottom: 2px solid #59ACFF;
 }
 
+/*************** main blocks ************/
+
+div.content {
+	box-sizing: border-box;
+	padding: 12px;
+	padding-top: 5px;
+	text-align: justify;
+	font-size: 0.9em;
+	line-height: 170%;
+}
+
+
 #cv {
 	display: none;
 	line-height: normal;
@@ -148,6 +155,8 @@ div#cv a:hover:after{
 #about {
 	display: block;
 }
+
+/************* CV Specific **************/
 
 .cv_heading {
 	box-sizing: border-box;
