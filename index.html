@@ -3,36 +3,49 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="content-type"></meta>
 <link rel="stylesheet" type="text/css" href="css/base.css">
-<script type="text/javascript" src="scripts/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="scripts/main.js"></script>
+<script type="text/javascript" src="scripts/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="scripts/slider.js"></script>
-<script>
+</head>
+<body>
+<div id="main">
+    <script>
         jssor_slider1_starter = function (containerId) {
-        
-        var _SlideshowTransitions = [
+        	var _SlideshowTransitions = [
             //Fade
             { $Duration: 2200, $Opacity: 2 }
             ];
-            
-		var options = {
+    
+            var options = {
                 $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
                 $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
-                $AutoPlayInterval: 3000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
-                $PauseOnHover: 1,                      	            //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, default value is 1
-                $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                $AutoPlayInterval: 3000, 
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+              	
+              	$SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
                     $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
                     $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
                     $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
                     $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
                 },
+                
+                $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+                    $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
+                    $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+                    $AutoCenter: 0,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+                    $SpacingX: 0,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                    $SpacingY: 0,                                   //[Optional] Vertical space between each item in pixel, default value is 0
+                    $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+               }
             };
-        var jssor_slider1 = new $JssorSlider$(containerId, options);
-	};
-</script>
-</head>
-<body>
-
-<div id="main">
+            var jssor_slider1 = new $JssorSlider$(containerId, options);
+        };
+    </script>
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles to css file or css block. -->
     <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
         <!-- Loading Screen -->
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -44,7 +57,8 @@
             </div>
         </div>
         <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px; overflow: hidden;">
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
+            overflow: hidden;">
             <div><img u="image" src="img/slider/01.jpg" /></div>
             <div><img u="image" src="img/slider/02.jpg" /></div>
             <div><img u="image" src="img/slider/03.jpg" /></div>
@@ -56,12 +70,42 @@
             <div><img u="image" src="img/slider/09.jpg" /></div>
             <div><img u="image" src="img/slider/10.jpg" /></div>
         </div>
+
+        <!-- Bullet Navigator Skin Begin -->
+        <style>
+            /* jssor slider bullet navigator skin 03 css */
+            /*
+            .jssorb03 div           (normal)
+            .jssorb03 div:hover     (normal mouseover)
+            .jssorb03 .av           (active)
+            .jssorb03 .av:hover     (active mouseover)
+            .jssorb03 .dn           (mousedown)
+            */
+            .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av
+            {
+                background: url(img/b14.png) no-repeat;
+                overflow:hidden;
+                cursor: pointer;
+            }
+            .jssorb03 div { background-position: -5px -5px; }
+            .jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -5px; }
+            .jssorb03 .av { background-position: -65px -5px; }
+            .jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -5px; }
+        </style>
+        <!-- bullet navigator container -->
+        <div u="navigator" class="jssorb03" style="position: absolute; bottom: 4px; left: 6px;">
+            <!-- bullet navigator item prototype; Add "<NumberTemplate></NumberTemplate>" in the next line for numbers-->
+            <div u="prototype" style="position: absolute; width: 21px; height: 21px; text-align:center; line-height:21px; color:white; font-size:7px;"></div>
+        </div>
+        <!-- Bullet Navigator Skin End -->
+
         <a style="display: none" href="http://www.jssor.com">banner slider</a>
         <!-- Trigger -->
         <script>
             jssor_slider1_starter('slider1_container');
         </script>
     </div>
+    <!-- Jssor Slider End -->
 	<div id="navigation">
 		<a class="nav" href="javascript:toggle_visibility('about');">About</a> | <a class="nav" href="javascript:toggle_visibility('research');">Research</a> | <a class="nav" href="javascript:toggle_visibility('cv');">Curriculum Vitae</a>
 	</div>
@@ -122,19 +166,19 @@
 						<td>2014</td><td>Duke Center for the History of Political Economy Final Year Fellow</td>
 				</tr>
 				<tr>
-						<td>2014	</td><td>Philadelphia Area Center for the History of Science Dissertation Fellow (declined)</td>
+						<td>2014		</td><td>Philadelphia Area Center for the History of Science Dissertation Fellow (declined)</td>
 				</tr>
 				<tr>
 						<td>2013 	</td><td>Critical Writing Fellow, University of Pennsylvania</td>
 				</tr>
 				<tr>
-						<td>2013	</td><td>Kennan Institute Summer Research Scholarship</td>
+						<td>2013		</td><td>Kennan Institute Summer Research Scholarship</td>
 				</tr>
 				<tr>
 						<td>2012 	</td><td>Institute for New Economic Thinking Research Grant</td>
 				</tr>
 				<tr>
-						<td>2012	</td><td>Institute for New Economic Thinking Young Scholar </td>
+						<td>2012		</td><td>Institute for New Economic Thinking Young Scholar </td>
 				</tr>
 				<tr>	
 						<td>2011 	</td><td>Duke University NIH Summer Institute in the History of Economics</td>
@@ -192,7 +236,7 @@
 						<td>2014	</td><td>"Post-Soviet Russian liberalism in search of its futures past," 21st Annual Meeting of the <i>Council for European Studies</i>, 14-16 March 2014</td>
 				</tr>
 				<tr>				
-						<td>2014 </td><td>"Towards computopia: Mathematicians, Cold War science, and the (re)birth of 'economic cybernetics' in the Soviet Union," Mathematical Superpowers: The Politics of Universality in a Divided World, at <i>New York University</i>, 27-28 February 2014.</td>
+						<td>2014 	</td><td>"Towards computopia: Mathematicians, Cold War science, and the (re)birth of 'economic cybernetics' in the Soviet Union," Mathematical Superpowers: The Politics of Universality in a Divided World, at <i>New York University</i>, 27-28 February 2014.</td>
 				</tr>
 				<tr>				
 						<td>2013	</td><td>"On the political economy of non-democracies: Second-order theory of Russia's transition to capitalism," 112th Annual Meeting of the <i>American Anthropological Association</i>,  20-24 November, 2013. (Organizer of panel, "Technopolitical Futures," sponsored by the Association for Political and Legal Anthropology.)</td>
@@ -253,10 +297,8 @@
 		</div>
 		<div class="cv_heading">REFERENCES</div>
 		<div class="cv_section">
-
-			Adriana Petryna<br/>
+			<a href="http://www.sas.upenn.edu/anthropology/people/petryna">Adriana Petryna</a><br/>
 			Edmund J. and Louise W. Kahn Term Professor in Anthropology <br/>
-			Richard Perry University Professor of Anthropology and Family and Community Medicine <br/>
 			University of Pennsylvania<br/>
 			Department of Anthropology <br/>
 			University Museum, Rm. 415 <br/>
@@ -265,7 +307,7 @@
 			215-746-0423 <br/>
 			petryna@sas.upenn.edu <br/>
 			<br/>
-			Philippe Bourgois <br/>
+			<a href="http://philippebourgois.net">Philippe Bourgois</a><br/>
 			Richard Perry University Professor of Anthropology and Family and Community Medicine <br/>
 			University of Pennsylvania<br/>
 			Department of Anthropology <br/>
@@ -275,7 +317,7 @@
 			215-746-1937 <br/>
 			bourgois@sas.upenn.edu<br/>
 			<br/>
-			John Tresch<br/>
+			<a href="https://sites.sas.upenn.edu/jtresch/">John Tresch</a><br/>
 			Associate Professor<br/>
 			Department of History and Sociology of Science<br/>
 			University of Pennsylvania<br/>
@@ -284,7 +326,7 @@
 			Philadelphia, PA 19104-6304<br/>
 			jtresch@sas.upenn.edu<br/>
 			<br/>
-			Serguei Alex Oushakine<br/>
+			<a href="https://slavic.princeton.edu/people/faculty/serguei-alex-oushakine">Serguei Alex Oushakine</a><br/>
 			Associate Professor of Slavic Languages and Anthropology<br/>
 			Department of Slavic Languages and Literatures<br/>
 			Princeton University<br/>
