@@ -19,7 +19,21 @@ body {
 	border-width: 1px;
 	font-family: Verdana, sans-serif;
 	}
-		
+
+#adamleeds {
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	padding-top:4px
+	padding-bottom: 3px;
+	margin-bottom: 4px;
+	font-size: 1.5em;
+	font-weight: 600;
+	letter-spacing: 3px;
+	border-bottom: 1px dotted gray;
+	}
+
 #navigation {
 	box-sizing: border-box;
 	position: relative;
