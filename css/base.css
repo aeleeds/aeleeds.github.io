@@ -49,27 +49,8 @@ body {
 	letter-spacing: 2px;
 	font-size: 0.9em;
 	}
-
-div.content {
-	box-sizing: border-box;
-	padding: 12px;
-	padding-top: 5px;
-	text-align: justify;
-	font-size: 0.9em;
-	line-height: 170%;
-}
-
-div.content a {
-	text-decoration: none;
-	color: black;
-	border-bottom: 2px dotted gray;
-}
-div.content a:hover {
-	text-decoration: none;
-	color: black;
-	border-bottom: 2px solid #59ACFF;
-}
-
+	
+/* nav links */
 a.nav {
 	text-decoration: none;
 	color: black;
@@ -82,6 +63,74 @@ a.nav:hover {
 	font-weight: 600;
 	border-bottom: 4px solid #59ACFF;
 	}
+
+div.content {
+	box-sizing: border-box;
+	padding: 12px;
+	padding-top: 5px;
+	text-align: justify;
+	font-size: 0.9em;
+	line-height: 170%;
+}
+
+/* links in the content block, except CV*/
+
+/*div.content a {
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px dotted gray;
+}*/
+
+/*div.content a:hover {
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px solid #59ACFF;
+}*/
+
+div.content a {
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+}
+
+div.content a:after {
+	content:'';
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:2px;
+	border-bottom: 2px dotted gray;
+}
+
+div.content a:hover:after{
+    content:'';
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:2px;
+	border-bottom: 2px solid #59ACFF;
+}
+
+/* CV links */
+div#cv a:after {
+	content:'';
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0px;
+	border-bottom: 2px dotted gray;
+}
+
+div#cv a:hover:after{
+    content:'';
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0px;
+	border-bottom: 2px solid #59ACFF;
+}
+
 
 #cv {
 	display: none;
