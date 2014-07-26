@@ -50,7 +50,16 @@ body {
 	letter-spacing: 2px;
 	font-size: 0.9em;
 	}
-	
+
+div.content {
+	box-sizing: border-box;
+	padding: 12px;
+	padding-top: 5px;
+	text-align: justify;
+	font-size: 0.9em;
+	line-height: 170%;
+}
+
 div.content a {
 	text-decoration: none;
 	color: black;
@@ -75,14 +84,9 @@ a.nav:hover {
 	border-bottom: 4px solid #59ACFF;
 	}
 
-div.content {
-	box-sizing: border-box;
-	padding: 12px;
-	text-align: justify;
-}
-
 #cv {
 	display: none;
+	line-height: normal;
 }
 
 #research {
