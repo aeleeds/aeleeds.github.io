@@ -99,8 +99,8 @@ a.nav:hover {
 
 .cv_heading {
 	box-sizing: border-box;
-	padding-top: 1em;
-	padding-bottom: 1em;
+	padding-top: 16px;
+	padding-bottom: 16px;
 	text-transform: uppercase;
 	font-size: 0.9em;
 	font-weight: 600;
@@ -127,10 +127,14 @@ table.cv_date_list tr {
 table.cv_date_list tr td:nth-child(1) {
 	vertical-align: top;
 	width: 15%;
-	padding-bottom: 1em;
+	padding-bottom: 12px;
 }
 
 table.cv_date_list tr td:nth-child(2) {
 	width: 85%;
-	padding-bottom: 1em;
+	padding-bottom: 12px;
+}
+
+table.cv_date_list tr:last-child>td {
+	padding-bottom: 0px;
 }
