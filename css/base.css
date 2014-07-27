@@ -219,12 +219,12 @@ table.cv_date_list tr {
 table.cv_date_list tr td:nth-child(1) {
 	vertical-align: top;
 	width: 15%;
-	padding-bottom: 12px;
+	padding-bottom: 10px;
 }
 
 table.cv_date_list tr td:nth-child(2) {
 	width: 85%;
-	padding-bottom: 12px;
+	padding-bottom: 10px;
 }
 
 table.cv_date_list tr:last-child>td {
