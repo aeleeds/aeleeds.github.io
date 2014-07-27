@@ -201,10 +201,6 @@ div.content {
 	overflow:auto;
 }
 
-.cv_heading:first-letter {
-	font-size: 1.0em;
-}
-
 .cv_section {
 	box-sizing: border-box;
 	font-size: 0.8em;
