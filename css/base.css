@@ -22,6 +22,7 @@ body {
 	}
 	
 a {
+	color: black;
 	position: relative;
 	display: inline;
 	text-decoration: none;
@@ -102,9 +103,23 @@ a.nav:hover:after{
 	
 /**************** links in the content block, except CV ****************/
 
-div.content a {
+div.content#about a {
 	position: relative;
 	display: inline;
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px dotted gray;
+	bottom: 0px;
+}
+
+div.content#about a:hover{
+    bottom:0px;
+	border-bottom: 2px solid #59ACFF;
+}
+
+/*div.content a {
+	position: relative;
+	display: inline-block;
 	text-decoration: none;
 	color: black;
 }
@@ -114,7 +129,7 @@ div.content a:after {
     position:absolute;
     left:0;
     right:0;
-    bottom: -1px;
+    bottom: 2px;
 	border-bottom: 2px dotted gray;
 }
 
@@ -123,9 +138,9 @@ div.content a:hover:after{
     position:absolute;
     left:0;
     right:0;
-    bottom:-1px;
+    bottom:2px;
 	border-bottom: 2px solid #59ACFF;
-}
+}*/
 
 /**************** CV links ****************/
 
