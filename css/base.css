@@ -199,6 +199,17 @@ div.content {
 	line-height: 170%;
 }
 
+#copyright {
+	font-size: 0.6em;
+	color: gray;
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 30px;
+}
+#copyright a {
+	color: gray;
+}
 
 #cv {
 	display: none;
