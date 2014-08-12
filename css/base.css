@@ -23,8 +23,13 @@ body {
 	
 a {
 	position: relative;
-	display: inline-block;
+	display: inline;
 	text-decoration: none;
+	white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
 }
 
 p {
@@ -99,7 +104,7 @@ a.nav:hover:after{
 
 div.content a {
 	position: relative;
-	display: inline-block;
+	display: inline;
 	text-decoration: none;
 	color: black;
 }
@@ -109,7 +114,7 @@ div.content a:after {
     position:absolute;
     left:0;
     right:0;
-    bottom:2px;
+    bottom: -1px;
 	border-bottom: 2px dotted gray;
 }
 
@@ -118,7 +123,7 @@ div.content a:hover:after{
     position:absolute;
     left:0;
     right:0;
-    bottom:2px;
+    bottom:-1px;
 	border-bottom: 2px solid #59ACFF;
 }
 
