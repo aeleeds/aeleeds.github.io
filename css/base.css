@@ -48,7 +48,7 @@ p {
 	margin-bottom: 3px;
 	font-size: 1.5em;
 	font-weight: 800;
-	letter-spacing: 4px;
+	letter-spacing: 2px;
 	border-bottom: 1px dotted gray;
 	}
 
@@ -64,7 +64,7 @@ p {
 	border-width: 1px;
 	text-align: center;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	font-size: 0.9em;
 	font-weight: 800;
 	background-color: white;
