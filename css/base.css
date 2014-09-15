@@ -1,7 +1,11 @@
 body {
-	background-color: white;
+
 	margin:0px;
 	padding:0px;
+	background-image: url("img/gagarin.jpg");
+	background-repeat: no-repeat;
+	background-position: right-top;
+	background-attachment: fixed;
 }
 
 #main {
