@@ -2,12 +2,12 @@ body {
 	margin:0px;
 	padding:0px;
 	background: right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg");
-background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) -moz-calc(50% + 100px), rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"); /* FF3.6+ */
+background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) -moz-calc(750px), rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(-webkit-calc(50% + 300px),rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 70%,rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"); /* Chrome10+,Safari5.1+ */
 background: -o-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 70%,rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"); /* Opera 11.10+ */
 background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 70%,rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"); /* IE10+ */
-background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) calc(50% + 100px),rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg"); /* W3C */
+background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) calc(750px),rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg"); /* W3C */
 }
 
 #main {
@@ -16,7 +16,7 @@ background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1)
 	overflow: hidden; 
 	position: relative;
 	/*left: 50%;*/
-	margin-left: 100px;
+	margin-left: 150px;
   	margin-top: 25px;
   	margin-bottom: 25px;
 	padding: 0px;
