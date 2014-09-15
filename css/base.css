@@ -15,8 +15,8 @@ background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1)
 	background-color: white;
 	overflow: hidden; 
 	position: relative;
-	left: 50%;
-	margin-left: -500px;
+	/*left: 50%;*/
+	margin-left: 100px;
   	margin-top: 25px;
   	margin-bottom: 25px;
 	padding: 0px;
