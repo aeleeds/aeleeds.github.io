@@ -2,13 +2,12 @@ body {
 	margin:0px;
 	padding:0px;
 	background: right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg");
-background: right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"),  -moz-linear-gradient(left,  rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
-background: right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"), -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
-background: right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"), -webkit-linear-gradient(left,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
-background: right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"), -o-linear-gradient(left,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
-background: right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"), -ms-linear-gradient(left,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
-background: right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"), linear-gradient(to right,  rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* W3C */
-}
+background: -moz-linear-gradient(left, rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,0))), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"); /* IE10+ */
+background: linear-gradient(to right, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/gagarin.jpg"); /* W3C */
 
 #main {
 	box-sizing: border-box;
