@@ -53,7 +53,14 @@
                     $SpacingX: 0,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
                     $SpacingY: 0,                                   //[Optional] Vertical space between each item in pixel, default value is 0
                     $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
-               }
+               },
+               
+            	$ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $ActionMode: 0,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+                    $DisableDrag: true                              //[Optional] Disable drag or not, default value is false
+                }
             };
             var jssor_slider1 = new $JssorSlider$(containerId, options);
         };
@@ -108,6 +115,21 @@
             </div>
         </div>
 
+		  <!-- ThumbnailNavigator Skin Begin -->
+        <div u="thumbnavigator" class="sliderb-T" style="position: absolute; bottom: 0px; left: 0px; height:45px; width:600px;">
+            <div style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px; width: 100%; height: 100%;">
+            </div>
+            <!-- Thumbnail Item Skin Begin -->
+            <div u="slides">
+                <div u="prototype" style="position: absolute; width: 600px; height: 45px; top: 0; left: 0;">
+                    <thumbnailtemplate style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; font-family: verdana; font-weight: normal; color:#fff; line-height: 45px; font-size:20px; padding-left:10px;"></thumbnailtemplate>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- ThumbnailNavigator Skin End -->
+
         <!-- Bullet Navigator Skin Begin -->
         <style>
             /* jssor slider bullet navigator skin 03 css */
@@ -133,7 +155,6 @@
         <div u="navigator" class="jssorb03" style="position: absolute; bottom: 4px; left: 6px;">
             <!-- bullet navigator item prototype; Add "<NumberTemplate></NumberTemplate>" in the next line for numbers-->
             <div u="prototype" style="position: absolute; width: 21px; height: 21px; text-align:center; line-height:21px; color:white; font-size:7px;">
-            	 <thumbnailtemplate style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; font-family: 'Lato'; font-weight: normal; color:#fff; line-height: 45px; font-size:20px; padding-left:10px;"></thumbnailtemplate>
             </div>
         </div>
         <!-- Bullet Navigator Skin End -->
