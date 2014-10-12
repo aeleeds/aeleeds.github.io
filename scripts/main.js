@@ -15,14 +15,7 @@ function toggle_visibilityTest(target)
 
 function toggle_visibility(target) 
 {
-	$('.content').each(function(index) 
-     {
-        if ($(this).attr("id") == target) 
-        {
-            $(this).slideDown;
-        }
-     });
-	
+	console.log(target);
 	$('.content').each(function(index) 
 	{
    		if ($(this).attr("id") != target)   
@@ -31,5 +24,13 @@ function toggle_visibility(target)
    		}
    	});
    	
+   	console.log(target);
+	$('.content').each(function(index) 
+     {
+        if ($(this).attr("id") == target) 
+        {
+            $(this).slideDown;
+        }
+     });
 }
 
