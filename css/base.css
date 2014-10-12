@@ -31,6 +31,7 @@ a {
 	color: black;
 	position: relative;
 	display: inline;
+	z-index: -1;
 	text-decoration: none;
 	white-space: pre-wrap; /* css-3 */    
     white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
