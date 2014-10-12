@@ -25,7 +25,7 @@ function toggle_visibility(target)
    		}
    	});
    	
-   	console.log('Slide down' + target);
+   	console.log('Slide down ' + target);
 	$('.content').each(function(index) 
      {
         console.log('Checking ' + $(this).attr('id'));
