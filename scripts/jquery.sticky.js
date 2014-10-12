@@ -39,7 +39,8 @@
           if (s.currentTop !== null) {
             s.stickyElement
               .css('position', '')
-              .css('top', '');
+              .css('top', '')
+              .css('z-index', '');
             s.stickyElement.trigger('sticky-end', [s]).parent().removeClass(s.className);
             s.currentTop = null;
           }
@@ -55,7 +56,8 @@
           if (s.currentTop != newTop) {
             s.stickyElement
               .css('position', 'fixed')
-              .css('top', newTop);
+              .css('top', newTop)
+              .css('z-index', '1');
 
             if (typeof s.getWidthFrom !== 'undefined') {
               s.stickyElement.css('width', $(s.getWidthFrom).width());
@@ -100,7 +102,6 @@
 
           var stickyWrapper = stickyElement.parent();
           stickyWrapper.css('height', stickyElement.outerHeight());
-          stickyWrapper.css('z-index', "1");
           sticked.push({
             topSpacing: o.topSpacing,
             bottomSpacing: o.bottomSpacing,
