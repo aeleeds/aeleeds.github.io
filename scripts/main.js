@@ -4,7 +4,9 @@ function toggle_visibility(thechosenone)
      {
           if ($(this).attr("id") == thechosenone) 
           {
-               $(this).slideDown();
+               if (($(this).is(":hidden")){
+               	$(this).slideDown();
+               }
           }
           else 
           {
