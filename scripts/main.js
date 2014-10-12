@@ -4,11 +4,11 @@ function toggle_visibility(thechosenone)
      {
           if ($(this).attr("id") == thechosenone) 
           {
-               $(this).show();
+               $(this).slideDown();
           }
           else 
           {
-               $(this).hide();
+               $(this).slideUp();
           }
      });
 }
