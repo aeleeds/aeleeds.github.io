@@ -8,15 +8,12 @@
 	<script type="text/javascript" src="scripts/main.js"></script>
 	<script type="text/javascript" src="scripts/jquery-2.1.0.min.js"></script>
 	<script type="text/javascript" src="scripts/slider.js"></script>
-	<!-- <script type="text/javascript" src="scripts/stickUp.min.js"></script>
-	<script type="text/javascript"> //initiating jQuery
-		jQuery(function($) { 
-			$(document).ready( function() { 
-			//enabling stickUp on the '.navbar-wrapper' class
-				$('#navigation').stickUp();
-			}); 
-		}); 
-	</script>-->
+	<script type="text/javascript" src="scripts/jquery.sticky.js"></script>
+	<script>
+	  $(document).ready(function(){
+		$("#navigation").sticky({topSpacing:0});
+	  });
+	</script> 
 	<title>Adam E. Leeds</title>
 </head>
 <!-- - - - - - - - - - - - - BEGIN BODY - - - - - - - - - - - - -->
