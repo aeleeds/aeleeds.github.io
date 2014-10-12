@@ -1,18 +1,27 @@
-function toggle_visibility(thechosenone) 
+function toggle_visibilityOld(thechosenone) 
 {
      $('.content').each(function(index) 
      {
           if ($(this).attr("id") == thechosenone) 
           {
-               if (($(this).is(":hidden")){
-               	$(this).slideDown();
-               }
+               	$(this).show();
           }
           else 
           {
-               $(this).slideUp();
+               $(this).hide();
           }
-          setTimeout(function() {
-      		}, 2000);
      });
 }
+
+function toggle_visibility(thechosenone) 
+{
+    $('.content').slideUp();
+    $('.content').each(function(index) 
+     {
+          if ($(this).attr("id") == thechosenone) 
+          {
+               	$(this).slideDown;
+          }
+     });
+}
+
