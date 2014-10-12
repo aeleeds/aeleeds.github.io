@@ -27,7 +27,7 @@ function toggle_visibility(target)
    	
    	setTimeout(function() {
       // Do something after 5 seconds
-}, 1000);
+
 
    	console.log('Slide down ' + target);
 	$('.content').each(function(index) 
@@ -39,5 +39,7 @@ function toggle_visibility(target)
             console.log('Sliding down ' + $(this).attr('id'));
         }
      });
+     
+     }, 2000);
 }
 
