@@ -31,7 +31,7 @@ function toggle_visibility(target)
         console.log('Checking ' + $(this).attr('id'));
         if ($(this).attr("id") == target) 
         {
-            $(this).slideDown;
+            $(this).slideDown();
             console.log('Sliding down ' + $(this).attr('id'));
         }
      });
