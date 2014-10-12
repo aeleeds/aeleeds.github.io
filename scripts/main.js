@@ -1,4 +1,4 @@
-function toggle_visibilityTest(target) 
+function toggle_visibilityOld(target) 
 {
      $('.content').each(function(index) 
      {
@@ -37,6 +37,6 @@ function toggle_visibility(target)
 				console.log('Sliding down ' + $(this).attr('id'));
 			}
 		 });
-     }, 500);
+     }, 400);
 }
 
