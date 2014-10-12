@@ -1,8 +1,8 @@
-function toggle_visibilityOld(thechosenone) 
+function toggle_visibility(target) 
 {
      $('.content').each(function(index) 
      {
-          if ($(this).attr("id") == thechosenone) 
+          if ($(this).attr("id") == target) 
           {
                	$(this).show();
           }
@@ -13,11 +13,11 @@ function toggle_visibilityOld(thechosenone)
      });
 }
 
-function toggle_visibility(thechosenone) 
+function toggle_visibilityTest(target) 
 {
 	$('.content').each(function(index) 
 	{
-   		if ($(this).attr("id") != thechosenone)   
+   		if ($(this).attr("id") != target)   
    		{
    			$('.content').slideUp();
    		}
@@ -25,7 +25,7 @@ function toggle_visibility(thechosenone)
    	
     $('.content').each(function(index) 
      {
-          if ($(this).attr("id") == thechosenone) 
+          if ($(this).attr("id") == target) 
           {
                	$(this).slideDown;
           }
