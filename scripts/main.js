@@ -1,4 +1,4 @@
-function toggle_visibility(target) 
+function toggle_visibilityTest(target) 
 {
      $('.content').each(function(index) 
      {
@@ -13,13 +13,13 @@ function toggle_visibility(target)
      });
 }
 
-function toggle_visibilityTest(target) 
+function toggle_visibility(target) 
 {
 	$('.content').each(function(index) 
 	{
    		if ($(this).attr("id") != target)   
    		{
-   			$('.content').slideUp();
+   			$(this).slideUp();
    		}
    	});
    	
