@@ -68,6 +68,8 @@ p {
 	border-style: dotted;
 	border-color: gray;
 	border-width: 1px;
+	border-left-width: 0px;
+	border-right-width: 0px;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 1px;
