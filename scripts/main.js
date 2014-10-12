@@ -15,7 +15,14 @@ function toggle_visibilityOld(thechosenone)
 
 function toggle_visibility(thechosenone) 
 {
-    $('.content').slideUp();
+	$('.content').each(function(index) 
+	{
+   		if ($(this).attr("id") != thechosenone)   
+   		{
+   			$('.content').slideUp();
+   		}
+   	});
+   	
     $('.content').each(function(index) 
      {
           if ($(this).attr("id") == thechosenone) 
