@@ -10,5 +10,7 @@ function toggle_visibility(thechosenone)
           {
                $(this).slideUp();
           }
+          setTimeout(function() {
+      		}, 2000);
      });
 }
