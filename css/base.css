@@ -263,17 +263,7 @@ table.cv_date_list tr:last-child>td {
 		margin-right: auto;
 		margin-top: 0px;
 	}
-}
-
-@media only screen and (min-device-width : 319px) and (max-device-width : 568px) and (orientation: landscape)
-{
-	body {
-		-webkit-text-size-adjust: none;
-		font-size: 30px;
-	}
-	#main {
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 0px;
+	#content {
+		padding-top: 0px;
 	}
 }
