@@ -256,6 +256,7 @@ table.cv_date_list tr:last-child>td {
 	body {
 		-webkit-text-size-adjust: none;
 		font-size: 30px;
+		background: white;
 	}
 	
 	#main {
@@ -263,6 +264,11 @@ table.cv_date_list tr:last-child>td {
 		margin-right: auto;
 		margin-top: 0px;
 	}
+	
+	#navigation {
+	
+	}
+	
 	#content {
 		padding-top: 0px;
 	}
