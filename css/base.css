@@ -266,5 +266,8 @@ table.cv_date_list tr:last-child>td {
 
 @media only screen and (min-device-width : 319px) and (max-device-width : 568px) and (orientation: landscape)
 {
-
+	body {
+		-webkit-text-size-adjust: none;
+		font-size: 30px;
+	}
 }
