@@ -251,11 +251,11 @@ table.cv_date_list tr:last-child>td {
 
 /************* Mobile **************/
 
-@media only screen and (min-device-width : 319px) and (max-device-width : 568px) 
+@media only screen and (min-device-width : 319px) and (max-device-width : 568px) and (orientation: portrait)
 {
 	body {
 		-webkit-text-size-adjust: none;
-		font-size: 17px;
+		font-size: 30px;
 	}
 	
 	#main {
@@ -264,3 +264,7 @@ table.cv_date_list tr:last-child>td {
 	}
 }
 
+@media only screen and (min-device-width : 319px) and (max-device-width : 568px) and (orientation: landscape)
+{
+
+}
