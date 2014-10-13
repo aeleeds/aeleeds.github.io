@@ -251,7 +251,7 @@ table.cv_date_list tr:last-child>td {
 
 /************* Mobile **************/
 
-@media only screen and (min-device-width : 319px) and (max-device-width : 568px) and (orientation: portrait)
+@media only screen and (min-device-width : 319px) and (max-device-width : 568px) 
 {
 	body {
 		-webkit-text-size-adjust: none;
