@@ -32,7 +32,8 @@ and (min-device-width : 319px)
 and (max-device-width : 568px) 
 {
 	#main {
-		margin-left: 0px;
+		margin-left: 5px;
+		margin-right: 5px;
 		margin-top: 0px;
 	}
 }
