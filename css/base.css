@@ -255,6 +255,7 @@ table.cv_date_list tr:last-child>td {
 {
 	body {
 		-webkit-text-size-adjust: none;
+		font-size: 17px;
 	}
 	
 	#main {
