@@ -21,7 +21,7 @@ function toggle_visibility(target)
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
 	var spacer = document.getElementById('spacer');
 	console.log('Height is' + docHeight);
-	$(spacer).css('height', docHeight);
+	$(spacer).css('min-height', docHeight);
 	
 	console.log('Hide all but ' + target);
 	$('.content').each(function(index) 
@@ -47,6 +47,6 @@ function toggle_visibility(target)
 		 });
      }, 400);
      
-     $(spacer).css('height','');
+     $(spacer).css('min-height','');
 }
 
