@@ -41,10 +41,11 @@
               .css('position', '')
               .css('top', '')
               .css('z-index', '')
-              .css('-webkit-box-shadow', 'box-shadow: 0px 10px 5px -2px rgba(0,0,0,0.75)')
-              .css('-moz-box-shadow', 'box-shadow: 0px 10px 5px -2px rgba(0,0,0,0.75)')
-              .css('box-shadow', 'box-shadow: 0px 10px 5px -2px rgba(0,0,0,0.75)');
+              .css('-webkit-box-shadow', '')
+              .css('-moz-box-shadow', '')
+              .css('box-shadow', '');
 
+            
             s.stickyElement.trigger('sticky-end', [s]).parent().removeClass(s.className);
             s.currentTop = null;
           }
@@ -62,9 +63,9 @@
               .css('position', 'fixed')
               .css('top', newTop)
               .css('z-index', '1')
-              .css('-webkit-box-shadow', '')
-              .css('-moz-box-shadow', '')
-              .css('box-shadow', '');
+              .css('-webkit-box-shadow', 'box-shadow: 0px 10px 5px -2px rgba(0,0,0,0.75)')
+              .css('-moz-box-shadow', 'box-shadow: 0px 10px 5px -2px rgba(0,0,0,0.75)')
+              .css('box-shadow', 'box-shadow: 0px 10px 5px -2px rgba(0,0,0,0.75)');
 
 
             if (typeof s.getWidthFrom !== 'undefined') {
