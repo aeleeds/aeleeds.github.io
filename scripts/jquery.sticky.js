@@ -63,9 +63,9 @@
               .css('position', 'fixed')
               .css('top', newTop)
               .css('z-index', '1')
-              .css('-webkit-box-shadow', '0px 15px 5px -6px rgba(0,0,0,0.55)')
-              .css('-moz-box-shadow', '0px 15px 5px -6px rgba(0,0,0,0.55)')
-              .css('box-shadow', '0px 15px 5px -6px rgba(0,0,0,0.55)');
+              .css('-webkit-box-shadow', '0px 15px 5px -5px rgba(0,0,0,0.45)')
+              .css('-moz-box-shadow', '0px 15px 5px -5px rgba(0,0,0,0.45)')
+              .css('box-shadow', '0px 15px 5px -5px rgba(0,0,0,0.45)');
 
 
             if (typeof s.getWidthFrom !== 'undefined') {
