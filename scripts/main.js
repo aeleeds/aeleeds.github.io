@@ -15,13 +15,13 @@ function toggle_visibilityOld(target)
 
 function toggle_visibility(target) 
 {
-	var body = document.body,
+	/*var body = document.body,
     html = document.documentElement;
 	var docHeight = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
 	var spacer = document.getElementById('spacer');
 	console.log('Height is' + docHeight);
-	$(spacer).css('min-height', docHeight);
+	$(spacer).css('min-height', docHeight);*/
 	
 	console.log('Hide all but ' + target);
 	$('.content').each(function(index) 
@@ -47,6 +47,6 @@ function toggle_visibility(target)
 		 });
      }, 400);
      
-     $(spacer).css('min-height','');
+     /*$(spacer).css('min-height','');*/
 }
 
