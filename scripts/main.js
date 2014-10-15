@@ -20,7 +20,7 @@ function toggle_visibility(target)
 	var docHeight = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
 	var spacer = document.getElementById('spacer');
-	console.log('Height is' + height);
+	console.log('Height is' + docHeight);
 	spacer.css('height', docHeight);
 	
 	console.log('Hide all but ' + target);
