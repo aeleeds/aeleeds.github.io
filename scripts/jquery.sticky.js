@@ -65,7 +65,7 @@
               .css('z-index', '1')
               .css('-webkit-box-shadow', '0px 10px 5px -6px rgba(255,255,255,0.45)')
               .css('-moz-box-shadow', '0px 10px 5px -6px rgba(255,255,255,0.45)')
-              .css('box-shadow', '0px 10px 5px -6px rgba(255,255,255,0.45)');*/
+              .css('box-shadow', '0px 10px 5px -6px rgba(255,255,255,0.45)');
 
 
             if (typeof s.getWidthFrom !== 'undefined') {
