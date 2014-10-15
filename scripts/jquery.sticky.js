@@ -40,10 +40,10 @@
             s.stickyElement
               .css('position', '')
               .css('top', '')
-              .css('z-index', '')
-              .css('-webkit-box-shadow', '')
+              .css('z-index', '');
+             /* .css('-webkit-box-shadow', '')
               .css('-moz-box-shadow', '')
-              .css('box-shadow', '');
+              .css('box-shadow', '');*/
 
             
             s.stickyElement.trigger('sticky-end', [s]).parent().removeClass(s.className);
@@ -62,10 +62,10 @@
             s.stickyElement
               .css('position', 'fixed')
               .css('top', newTop)
-              .css('z-index', '1')
-              .css('-webkit-box-shadow', '0px 10px 5px 0px rgba(0,0,0,0.45)')
-              .css('-moz-box-shadow', '0px 10px 5px 0px rgba(0,0,0,0.45)')
-              .css('box-shadow', '0px 10px 5px 0px rgba(0,0,0,0.45)');
+              .css('z-index', '1');
+           /*   .css('-webkit-box-shadow', '0px 10px 5px -6px rgba(0,0,0,0.45)')
+              .css('-moz-box-shadow', '0px 10px 5px -6px rgba(0,0,0,0.45)')
+              .css('box-shadow', '0px 10px 5px -6px rgba(0,0,0,0.45)');*/
 
 
             if (typeof s.getWidthFrom !== 'undefined') {
@@ -96,7 +96,7 @@
 
           var stickyId = stickyElement.attr('id');
           var wrapperId = stickyId ? stickyId + '-' + defaults.wrapperClassName : defaults.wrapperClassName 
-          var wrapper = $('<div style="overflow-x:hidden"></div>')
+          var wrapper = $('<div></div>')
             .attr('id', stickyId + '-sticky-wrapper')
             .addClass(o.wrapperClassName);
           stickyElement.wrapAll(wrapper);
