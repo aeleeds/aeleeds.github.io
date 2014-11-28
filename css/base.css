@@ -177,9 +177,12 @@ div.content {
 }
 
 #about {
-	display: block;
+	display: none;
 }
 
+:target {
+	display:block;
+}
 /*p:first-letter {
 	float: left; 
 	font-family: ;
