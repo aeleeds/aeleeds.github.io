@@ -167,6 +167,12 @@ div.content {
 	color: gray;
 }
 
+#cv:target,
+#research:target,
+#about:target {
+	display:block;
+}
+
 #cv {
 	display: none;
 	line-height: normal;
@@ -179,6 +185,7 @@ div.content {
 #about {
 	display: block;
 }
+
 
 /*p:first-letter {
 	float: left; 
