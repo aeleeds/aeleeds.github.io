@@ -273,6 +273,6 @@ table.cv_date_list tr:last-child>td {
 	}
 	
 	#content {
-		padding-top: 0px;
+		/* padding-top: 0px;*/
 	}
 }
