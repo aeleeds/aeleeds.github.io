@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="/css/base.css" >
+        <script type="text/javascript">
+window.onload = function() {
+    if (parent) {
+        var oHead = document.getElementsByTagName("head")[0];
+        var arrStyleSheets = parent.document.getElementsByTagName("style");
+        for (var i = 0; i < arrStyleSheets.length; i++)
+            oHead.appendChild(arrStyleSheets[i].cloneNode(true));
+    }
+}
+</script>
+    </head>
+    <body>
+
+    <h1>Home</h1>
+
+    <div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="content">
+    
+      <li>
+        <span class="post-meta">Feb 24, 2016</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll/update/2016/02/24/welcome-to-jekyll.html">Welcome to Jekyll!</a>
+        </h2>
+      </li>
+    
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+
+</div>
+
+
+</body>
+</html>
