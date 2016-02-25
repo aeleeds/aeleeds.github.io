@@ -65,6 +65,7 @@ p {
 	position: relative;
 	width: 600px;
 	margin-top: 5px;
+	margin-bottom: 5px;
 	padding: 3px;
 	clear: both;
 	border-style: dotted;
