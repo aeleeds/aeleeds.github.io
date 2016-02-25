@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<meta name="description" content="Homepage of Adam E. Leeds, an anthropologist researching economic knowledge, state power, and the political imagination (especially via Russia)." />
+	<meta name=viewport content="width=device-width, initial-scale=0.524" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,600,700,800|Open+Sans:400,600,700,800' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<script type="text/javascript" src="scripts/main.js"></script>
+	<script type="text/javascript" src="scripts/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="scripts/slider.js"></script>
+	<script type="text/javascript" src="scripts/jquery.sticky.js"></script>
+	<script>
+	  $(document).ready(function(){
+		$("#navigation").sticky({topSpacing:-6});
+	  });
+	</script> 
+	<title>Adam E. Leeds</title>
+</head>
+<!-- - - - - - - - - - - - - BEGIN BODY - - - - - - - - - - - - -->
+<body>
+<div id="main">
+<!-- - - - - - - - - - - - - BEGIN SLIDER - - - - - - - - - - - - -->
+    <script>
+        jssor_slider1_starter = function (containerId) {
+        	var _SlideshowTransitions = [
+            //Fade
+            { $Duration: 2200, $Opacity: 2 }
+            ];
+    
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                $AutoPlayInterval: 3000, 
+                $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizontal, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+              	
+              	$SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
+                    $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
+                    $Transitions: _SlideshowTransitions,            //[Required] An array of slideshow transitions to play slideshow
+                    $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
+                    $ShowLink: true                                    //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false
+                },
+                
+                $BulletNavigatorOptions: {                                //[Optional] Options to specify and enable navigator or not
+                    $Class: $JssorBulletNavigator$,                       //[Required] Class to create navigator instance
+                    $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $ActionMode: 1,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+                    $AutoCenter: 0,                                 //[Optional] Auto center navigator in parent container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 0
+                    $Steps: 1,                                      //[Optional] Steps to go for each navigation request, default value is 1
+                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
+                    $SpacingX: 0,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
+                    $SpacingY: 0,                                   //[Optional] Vertical space between each item in pixel, default value is 0
+                    $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+               },
+               
+            	$ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+                    $ActionMode: 0,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
+                    $DisableDrag: true                              //[Optional] Disable drag or not, default value is false
+                }
+            };
+            var jssor_slider1 = new $JssorSlider$(containerId, options);
+        };
+    </script>
+    <!-- Jssor Slider Begin -->
+    <!-- You can move inline styles to css file or css block. -->
+    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #FFFFFF; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px; overflow: hidden;">
+            <div>
+            	<img u="image" src="img/slider/01.jpg" />
+            	<div u="thumb">Riot police at the first protest, December 5th, 2011.</div>
+            </div>
+            <div>
+            	<img u="image" src="img/slider/02.jpg" />
+            	<div u="thumb">Mourners at Yegor Gaidar's grave, March 19th, 2011.</div>
+            </div>
+            <div>
+            	<img u="image" src="img/slider/03.jpg" />
+            	<div u="thumb">"They've fucked you." Anarchists, 1st Bolotnaya protest, 10 Dec., 2011.</div>
+            </div>
+            <div>
+            	<img u="image" src="img/slider/04.jpg" />
+            	<div u="thumb">The Russian Socialist Movement (RSD) at a protest.</div>
+            </div>
+            <div>
+            	<img u="image" src="img/slider/05.jpg" />
+            	<div u="thumb">Sergei Udaltsov refuses to leave Pushkinskaya Square, March 5th, 2012.</div>
+            </div>
+            <div>
+            	<img u="image" src="img/slider/06.jpg" />
+            	<div u="thumb">Wake for Leonid Abalkin, economist of perestroika, May 5th, 2011.</div>
+            </div>
+            <div>
+            	<img u="image" src="img/slider/07.jpg" />
+            	<div u="thumb">Socialists gather at Revolution Square, December 10th, 2011.</div>
+            </div>
+            <div>
+            	<img u="image" src="img/slider/08.jpg" />
+            	<div u="thumb">General Assembly at the Occupy Abai encampment, May 2012.</div>
+            </div>
+            <div>
+            	<img u="image" src="img/slider/09.jpg" />
+            	<div u="thumb">Kudrin and Chubais dedicate a plaque of Gaidar, March 19th, 2011.</div>
+            </div>
+            <div>
+            	<img u="image" src="img/slider/10.jpg" />
+            	<div u="thumb">The Institute of Economics, viewed from CEMI</div>
+            </div>
+        </div>
+
+		  <!-- ThumbnailNavigator Skin Begin -->
+        <div u="thumbnavigator" class="sliderb-T" style="position: absolute; bottom: 0px; left: 0px; height:30px; width:600px;">
+            <div style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block; background-color: #000000; top: 0px; left: 0px; width: 100%; height: 100%;">
+            </div>
+            <!-- Thumbnail Item Skin Begin -->
+            <div u="slides">
+                <div u="prototype" style="position: absolute; width: 600px; height: 30px; top: 0; left: 0px;">
+                    <thumbnailtemplate style="position: absolute; width: 590px; height: 100%; top: 0; left: 0; font-family: 'Lato'; font-weight: normal; color:#C0C0C0; line-height: 30px; font-size:12px; padding-right:10px; text-align:right;"></thumbnailtemplate>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+        <!-- ThumbnailNavigator Skin End -->
+
+        <!-- Bullet Navigator Skin Begin -->
+        <style>
+            /* jssor slider bullet navigator skin 03 css */
+            /*
+            .jssorb03 div           (normal)
+            .jssorb03 div:hover     (normal mouseover)
+            .jssorb03 .av           (active)
+            .jssorb03 .av:hover     (active mouseover)
+            .jssorb03 .dn           (mousedown)
+            */
+            .jssorb03 div, .jssorb03 div:hover, .jssorb03 .av
+            {
+                background: url(img/b14.png) no-repeat;
+                overflow:hidden;
+                cursor: pointer;
+            }
+            .jssorb03 div { background-position: -5px -5px; }
+            .jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -5px; }
+            .jssorb03 .av { background-position: -65px -5px; }
+            .jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -5px; }
+        </style>
+        <!-- bullet navigator container -->
+        <div u="navigator" class="jssorb03" style="position: absolute; bottom: 4px; left: 6px;">
+            <!-- bullet navigator item prototype; Add "<NumberTemplate></NumberTemplate>" in the next line for numbers-->
+            <div u="prototype" style="position: absolute; width: 21px; height: 21px; text-align:center; line-height:21px; color:white; font-size:7px;">
+            </div>
+        </div>
+        <!-- Bullet Navigator Skin End -->
+
+        <a style="display: none" href="http://www.jssor.com">banner slider</a>
+        <!-- Trigger -->
+        <script>
+            jssor_slider1_starter('slider1_container');
+        </script>
+    </div>
+    <!-- Jssor Slider End -->
+<!-- - - - - - - - - - - - - END SLIDER - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - BEGIN NAVIGATION - - - - - - - - - - - - -->
+	<div id="navigation">
+		<div id="adamleeds">Adam E. Leeds</div>
+		<div>
+			<a class="nav" onclick="toggle_visibility('about');">About</a> | <a class="nav" onclick="toggle_visibility('research');">Research</a> | <a class="nav" onclick="toggle_visibility('cv');">Curriculum Vitae</a>
+		</div><!--
+		<div id="research_nav">
+			<a class="nav" onclick="">Liberalism</a> | <a class="nav" onclick="">Economics</a> | <a class="nav" onclick="">States</a>
+		</div>-->
+	</div>
+<!-- - - - - - - - - - - - - END NAVIGATION - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - BEGIN CONTENT BOX - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - BEGIN ABOUT - - - - - - - - - - - - -->
+	<div id="about" class="content">
+		<iframe src="test-index.html" width="200px" height="390px" align="left"></iframe>
+		<p>What is it to govern and to be governed in the contemporary situation? I am an anthropologist concerned with political rationalities and technologies of rule. In particular, I am interested in the imagination and assembly of forms of political order that could be understood as liberalisms by means of the forms of knowledge called economics. My current project is a historical ethnography of the mathematical economists of Moscow from the Soviet Union to contemporary Russia. It is draws on twenty months of field research, during which I was based at the <a href="http://www.nes.ru">New Economic School</a> (NES) and <a href="http://www.cemi.rssi.ru/">Central Economic Mathematical Institute</a> (CEMI) of the Russian Academy of Sciences (pictured at right). The genealogy of Moscow economics reveals a point of emergence and elaboration for alternative liberalisms and socialisms that illuminate both the limits and fecundity of the modern political imaginary.</p>
+		<div class="cv_heading" style="padding-top: 15px; padding-bottom: 6px">Contact Information</div>
+		<div class="cv_section">
+			<table columns="2" style="border: 0px; width: 100%; line-height: 1.2em; margin: 0px;">
+				<tr>
+					<td style="width:50%;">University Museum Room 325</td><td style="width:50%;">914.980.2970</td>
+				</tr>
+				<tr>
+					<td>3260 South St.</td><td><script>
+						<!--
+						var preName = "a.e.leeds" 
+						var postName = "gmail.com"
+						document.write(preName + "@" + postName)
+						//-->
+					</script></td>
+				</tr>
+				<tr>
+					<td>Philadelphia, PA 19104</td><td><script>
+						<!--
+						var preName = "leeds" 
+						var postName = "sas.upenn.edu"
+						document.write(preName + "@" + postName)
+						//-->
+					</script></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+<!-- - - - - - - - - - - - - END ABOUT - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - BEGIN RESEARCH - - - - - - - - - - - - -->
+	<div id="research" class="content">
+		<p>On December 5th, 2011, the day after the contested parliamentary elections, the long dormancy of Russian politics was shattered as a protest in the wealthy district of Chistie Prudi (“Clean Ponds”) drew 5,000 people — an order of magnitude more than any in the previous decade — and they refused to leave. I had come there from tutoring the son of one of the prominent liberal members of Yeltsin’s government to meet a friend, an art and literary critic and socialist organizer, with whom I spent the the night running from police cordons attempting to prevent us from reaching the symbolically important Lubyanka Square, the site of the headquarters of the former KGB from which so many members of the ruling elite came. Over the next half a year, while I continued to interview several generations of economists, the protest movement gathered steam. Liberalism, of a sort, seemed to have been reborn from next to nothing. As Russia had emerged from the tumult and disappointments of the 1990s into the long period of “stagnation” of the first several terms of the Putin regime, the question continually posed by their self-conscious proponents was how liberalism, capitalism, and democracy could be so quietly in decline, how a people that had so recently and decisively ended Soviet communism could so easily accept, and often seemingly with no small measure of satisfaction, an order the critics of which painted as a xenophobic authoritarian kleptocracy. The flagship parties of 1990s liberalism, even those that had pledged their support to the Putin project, had been gradually squeezed out of the political arena. Western commentators (and some Russians), replicating in a non-democratic context basic presuppositions of Downsian two-party competition layered with Cold War logics of the enemy, painted the Kremlin as the arena of a shadow war of “liberals” and “siloviki” (alumni of the intelligence and defense communities). This was revealed as farce on September 24th, 2011, when Medvedev announced that by prior agreement he and Putin would again switch places. The remaining liberal technocrats in government merely tried to stay useful: newspapers referred to them as the old Bolsheviks had to the Tsarist scientists and engineers they had continued to employ, as the “bourgeois specialists.” To the “office plankton”, that fraction of the first truly post-Soviet generation that captured much of the gains of the Putin prosperity, the liberals of the 1990s were irrelevant remnants of the Soviet order they dismantled, while to the larger mass of Russians seeking only a modicum of stability in which to rebuild domestic lives in small cities scattered across the expansive rusting remains of the Soviet technostructure they were simply traitors.</p>
+<p>Whence came (post-)Soviet liberalism? Its roots have often been traced to the dissidents of the 1960s and 1970s. As the narrative goes, the liberalization of Khrushchev’s “Thaw” allowed the flowering of criticism, which persisted in an underground during the subsequent decades of repression and “Stagnation”, and was either cause or symptom of the seemingly similar phenomena of perestroika and glasnost. This narrative, while not entirely wrong, takes some 1990s liberals at their retrospective and anachronistic word — that they were “liberal” from the beginning — rather than placing them in the social and discursive context in which they arose. It presupposes for its emplotment the categories of liberal political philosophy: resistance, oppression, criticism, freedom, etc (Krylova 2000). Drawing on Stephen Kotkin’s seminal study of the building of the city of Magnetogorsk (1995) in which he argues that Stalinism was more than a regime, something like a “civilization” in which the only possibility was to “speak Bolshevik”, recent work has undertaken to analyze how Soviet culture enabled distinct modes of subjectivization and enunciation. Critiquing the (liberal) binary of dissidence and loyalty in the post-Stalinist period, Alexei Yurchak (2005) argues that late socialism was riddled with social spaces in which alternative self-positionings became possible (Voronkov and Wielgohs 2004 call this the “private public sphere”), including crucially the possibility of a disidentification with not just the regime but politics in general, which he calls “living vnye (outside)”. But Yurchak’s work as much as that of earlier studies of dissidence is marked by an assumption of the critical function of the artistic and literary avant-garde and thus by an overemphasis on their milieux as birthplace of non-loyalist attitudes. As other scholars are increasingly noting, however, at least as important were the massive institutes of the sprawling Soviet Academy of Sciences (Vail & Genis 1998; Garcelon 1997; Lipovetsky 2013).<br/><br/>
+In the decades immediately following the Second World War, Soviet society as a whole and the military-scientific complex in particular transformed in ways not entirely unlike those in the West: a large new generation flooded into a university system expanding at breakneck speed while links between the military and science established during the war continued to proliferate and suck in more and more resources for Cold War competition. This transformation happened under the aegis of a grand interdisciplinary project of “cybernetics”, which was to be in service of the “scientific-technical revolution” that had to take up where industrialization had left off, and which involved a massive buildout of applied science.  All this was accompanied by a cultural hypervalorization of science, and a newfound institutional autonomy for scientists. The result was the creation of a vast new caste, one sometimes called the Soviet middle class, composed of several fractions (though I will refer to them together below as the scientific intelligentsia) : engineers, the “scientific-technical intelligentsia”, “engineering-technical workers”, teachers and professors, and others (cf. for canonical theorizations Konrad & Szelenyi 1979 and King & Szelenyi 2004). Within this caste and in the institutional interstices of relative autonomy created for them and by them, new relationships to the state were negotiated — more stances than just opposition, dissidence, or disidentification. It is this large caste — not the comparatively tiny circles of literary intellectuals — that provided the social basis for perestroika, that supported the painful reforms of the 1990s, and from which most members of the post-Soviet liberal intelligentsia hailed. </p>
+<p>Within this caste, I argue, the economists turn out to be crucial. The flowering of economic thought of the 1920s ended in Stalin’s Great Break that initiated the industrialization drive, whereupon economics became a complex form of apologetics and political pedagogy. During the 1950s, in league with the newly powerful mathematicians and physicists that came to dominate the Academy under the banner of cybernetics, mathematical economists quickly institutionalized themselves. By means of mathematical tools shared with the emerging mainstream of Western economics but interpreted vastly differently, these economists began to elaborate alternative visions of what true socialism would be. These economic cyberneticians occupied the position of loyal reformers. They could expect comfortable lifestyles within the Academy, and sought to enact reform through the channels and networks it provided. And it was the the next, post-Thaw, generation, that of the 1970s and 1980s who, increasingly disillusioned with Soviet socialism’s possibilities for reforming itself, came to power with Yeltsin in 1992 and enacted the measures that guided the collapse of the Soviet order and the birth of capitalism. I argue that the line of development of reform thinking within Soviet economic cybernetics, culminating in a critical vision of the political economy of the Soviet Union, was one of the principal strands, which, together with dissidence and disidentification among others, formed post-Soviet Russian liberalism. The multigenerational story of these economists, one of both intellectual and institutional formation and transformation, but also one of people with their styles of sociability, longings, aspirations, nostalgias, ethos, etc., forms the heart of my story.</p>
+<p>Anthropologists have increasingly examined the forms and relations of subject and state and how they have changed over the last 25 years, most recently under the rubric of “neoliberalism”. They have asked what the state now is, and how citizens are enabled, constrained or forced to participate in it (or disallowed, dismissed, or discarded by it). How are neoliberal subjects constituted as such, how do they relate to the state, and what sort of state would have or create citizens like that? These questions have been posed most often from the points of view of people who are not part of government, who are objects of expertise. Despite calls issued long ago for anthropology to “study up” (Nader 1972), anthropologists are still not comfortable doing so. Marcus (2005) argues that after the collapse of anthropology’s discipline-specific frameworks in the 1980s, an activist stance, a sort of identification with those studied, has taken its place as disciplinary diacritic. But, I argue, understanding liberal states, understanding governmentality, requires studying another category of people, those who are the state, who have claims to advise the state, those who, in the extreme, make it their life’s work to bring a liberal vision to life. With Foucault, I argue that as much now as in the 18th century it is political economists, not philosophers, who articulate such visions, such “reflexive prisms” in which the state appears as a subject and logic of action, not in the abstract but as situated responses to historically specific problematizations of rule. Political economy is the savoir that articulates political philosophy and techniques of rule via liberal technologies of government, that is to say, governmentalities.<br/><br/>
+The Soviet case is not only the crucial but the best case to understand the intertwined fates of liberalism and socialism in the 20th century, and thus the predicament that we find ourselves in at the beginning of the 21st. As much as the advent of the Soviet Union undergirded the teleologies of Marxian histories, its disappearance  anchors that which the trope of “neoliberalism” has become in the human sciences: a (tragic) teleology arcing toward a liberal “end of history”, a label for the epoch in which we now find ourselves, the essence of which is expressed in all its particulars. Telling the story of political economy in the Soviet Union and Russia removes the collapse of the Soviet Union from that narrative, eliminates its telos, and thus dissolves the trope. This end of the master trope of neoliberalism is essential to free the human sciences from the blank, flat field of the end of history, and rescue any politics which might still involve them. We have lost the ability to remember our very recent past, to understand our present in which nameable actors are ceaselessly producing new liberalisms, and thus to think alternative futures. Telling one such present-past, that of Soviet economics and the birth of post-Soviet liberalism, to dissolve this obfuscation of the present clears the ground to begin to understand the liberalisms that are just now coming into being around the world and thereby reactivate the productive co-imagination of liberalisms and socialisms that lies at the heart of the modern political imaginary.</p>
+	</div>
+<!-- - - - - - - - - - - - - END RESEARCH - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - BEGIN CV - - - - - - - - - - - - -->
+	<div id="cv" class="content">
+		<div class="cv_heading" style="padding-top: 2px; clear: none;">Education
+			<span class="cv_section" style="font-size: 75%; text-align: right; float: right; text-transform: none; font-weight: 400; vertical-align: text-bottom; padding-top:2px;">
+				<img src="img/download.gif" style="width: 11px; height: 11px; vertical-align:bottom;" />&nbsp;<a class="download_link" href="files/leeds%20-%20master%20cv.pdf" >Download as PDF</a>.
+			</span>
+		</div>
+		<div class="cv_section">
+			<a href="http://www.sas.upenn.edu/anthropology/node/145870">University of Pennsylvania</a>, Philadelphia PA<br />
+			Ph. D. in Anthropology, June 2015
+			<table columns="2" style="border: 0px; margin-top: 0px; margin-bottom:5px;">
+				<tr>
+					<td style="width:30%; text-align:right; vertical-align:top;">Dissertation:</td><td style="width:70%">Spectral Liberalisms: On the Subjects of Political Economy in Moscow</td>
+				</tr>
+				<tr>	
+					<td style="width:30%; text-align:right; vertical-align:top;">Committee:</td><td style="width:70%">Adriana Petryna (chair), Philippe Bourgois, John Tresch, Serguei Oushakine (Princeton), Stephen Collier (New School)</td>
+				</tr>
+			</table>
+			University of Chicago, Chicago IL<br/>
+			Bachelor of Arts in Philosophy June 2005 
+		</div>
+		<div class="cv_heading">Awards and Fellowships</div>
+		<div class="cv_section">
+			<table class="cv_date_list">
+				<tr>	
+						<td>2014</td><td><a href="http://hope.econ.duke.edu/node/1103">Duke Center for the History of Political Economy Final Year Fellow</a></td>
+				</tr>
+				<tr>
+						<td>2014		</td><td>Philadelphia Area Center for the History of Science Dissertation Fellow (declined)</td>
+				</tr>
+				<tr>
+						<td>2013 	</td><td>Critical Writing Fellow, University of Pennsylvania</td>
+				</tr>
+				<tr>
+						<td>2013		</td><td><a href="http://www.wilsoncenter.org/staff/adam-leeds">Kennan Institute Summer Research Scholarship</a></td>
+				</tr>
+				<tr>
+						<td>2012 	</td><td>Institute for New Economic Thinking Research Grant</td>
+				</tr>
+				<tr>
+						<td>2012		</td><td><a href="http://ineteconomics.org/people/adam-leeds">Institute for New Economic Thinking Young Scholar</a></td>
+				</tr>
+				<tr>	
+						<td>2011 	</td><td>Duke University NIH Summer Institute in the History of Economics</td>
+				</tr>
+				<tr>					
+						<td>2010 	</td><td><a href="http://www.wennergren.org/grantees/leeds-adam-ephraim">Wenner Gren Dissertation Fieldwork Grant</a></td>
+				</tr>
+				<tr>
+						<td>2010 	</td><td>ACCELS/ACTR Title VIII Combined Research and Language Training Grant</td>
+				</tr>
+				<tr>		
+						<td>2010 	</td><td>Fulbright IIE (declined) </td>
+				</tr>
+				<tr>
+						<td>2009 	</td><td>Kathryn Davis Fellowship for Peace, Middlebury College School of Russian</td>
+				</tr>
+				<tr>				
+						<td>2009 	</td><td>Critical Language Scholarship (declined)</td>
+				</tr>
+				<tr>	
+						<td>2008 	</td><td>University of Pennsylvania Slavic Studies Department Summer Language Award</td>
+				</tr>
+				<tr>			
+						<td>2008 	</td><td>University of Pennsylvania Anthropology Department Summer Field Award</td>
+				</tr>
+				<tr>			
+						<td>2006-2011 	</td><td>University of Pennsylvania Benjamin Franklin Fellow</td>
+				</tr>
+				<tr>			
+						<td>2001-2005 	</td><td>National Merit Scholar</td>
+				</tr>
+				<tr>			
+						<td>2001-2005 	</td><td>University of Chicago University Scholar</td>
+				</tr>
+			</table>
+		</div>
+		<div class="cv_heading">Publications</div>
+		<div class="cv_section">
+			<table class="cv_date_list">
+				<tr>	
+						<td>n.d.</td>	<td>“Dreams in Cybernetic Fugue: Cold War Technoscience, the Intelligentsia, and the Birth of Soviet Mathematical Economics,” <i>Historical Studies in the Natural Sciences</i> (revise and resubmit).</td>
+				</tr>
+			</table>
+		</div>
+		<div class="cv_heading">Lectures and Presentations</div>
+		<div class="cv_section">
+			<div class="cv_subheading" style="padding-top:0px;">Invited Talks</div>
+			<table class="cv_date_list">
+				<tr>
+						<td>2015	</td><td>“Assembling the Economic Mechanism: Soviet Economics 1937–1965 and the Technology of Socialist Government” Invited lecture at the <i>Duke University Center for the History of Political Economy</i>, 10 April.</td>
+				</tr>
+				<tr>
+						<td>2014	</td><td>“Dreams in cybernetic fugue: The mathematization of Soviet economics,” Invited lecture at the <i>Duke University Center for the History of Political Economy</i>, 17 November.</td>
+				</tr>
+				<tr>			
+						<td>2012	</td><td>"Fragments for a history of economics in Russia, 1958-2012," Invited lecture at the <i>Baltic International Centre for Economical Policy Studies</i>, 21 June. </td>
+				</tr>
+			<table>
+			<div class="cv_subheading">Conference Papers</div>
+			<table class="cv_date_list">
+				<tr>
+						<td>2015	</td><td>"Forecasting a Future That Would Never Come: The Horizon of Soviet Technological Futurology," 114th Annual Meeting of the <i>American Anthropological Association</i>,  18-22 November.</td>
+				</tr>
+				<tr>			
+						<td>2015	</td><td>"The Long Road to Asymptopia: The Assembly of Mathematical Economics and the Rebirth of Economic Veridiction in the Soviet Union,"  40th Annual Meeting of the <i>Social Science History Association</i>, 12-15 November.</td>
+				</tr>
+				<tr>
+						<td>2015	</td><td>“In All But Name: The Reconstruction of Economic Reason in the Post-War Soviet Economy,” Annual Meeting of the <i>History of Economics Society</i>, 26-29 June.</td>
+				</tr>
+				<tr>
+						<td>2015	</td><td>“Planning the End of Planning: Late Soviet Theories of “the Administrative Market” and the Formation of Yeltsin’s First Government,” <i>HISRECO: History of Recent Economics</i>, University of Cergy-Pontoise, 29-30 May.</td>
+				</tr>
+				<tr>
+						<td>2015	</td><td>“Towards an Anthropology of Formalisms: Semiotic Technologies for Making 'the Economy',” 2nd Annual <i>Semiotic Anthropology Conference</i>, at the University of Pennsylvania, 6-7 May.
+				</tr>
+				<tr>
+						<td>2014	</td><td>"Mobilizing a Universal Technology: IMF Financial Programming and the Legibility of the Russian Economy in Transition," 113th Annual Meeting of the <i>American Anthropological Association</i>,  3-7 December. (Organizer of panel, "Figuring Expert and Everyday Economies: Representations/Interventions," sponsored by the Society for Economic Anthropology.)</td>
+				</tr>
+				<tr>			
+						<td>2014	</td><td>"The Fractured Field: Power and Economic Expertise in the Russian Government across Two Decades of Crisis,"  39th Annual Meeting of the <i>Social Science History Association</i>, 6-9 November.</td>
+				</tr>
+				<tr>			
+						<td>2014	</td><td>"Post-Soviet Russian liberalism in search of its futures past," 21st Annual Meeting of the <i>Council for European Studies</i>, 14-16 March.</td>
+				</tr>
+				<tr>				
+						<td>2014 	</td><td>"Towards computopia: Mathematicians, Cold War science, and the (re)birth of 'economic cybernetics' in the Soviet Union," <i>Mathematical Superpowers: The Politics of Universality in a Divided World</i>, at New York University, 27-28 February.</td>
+				</tr>
+				<tr>				
+						<td>2013	</td><td>"On the political economy of non-democracies: Second-order theory of Russia's transition to capitalism," 112th Annual Meeting of the <i>American Anthropological Association</i>,  20-24 November. (Organizer of panel, "Technopolitical Futures," sponsored by the Association for Political and Legal Anthropology.)</td>
+				</tr>
+				<tr>				
+						<td>2013	</td><td>"First contact: Soviet and American economists at the beginning of the end of the Soviet economy," 38th Annual Meeting of the <i>Social Science History Association</i>, 21-4 November.</td>
+				</tr>
+				<tr>			
+						<td>2012	</td><td>"Descent from Snake Mountain: On the contexts and content of late Soviet economics," 44th Annual Convention of the <i>Association for Slavic, East European and Eurasian Studies</i>, 15-18 November.</td>
+				</tr>
+				<tr>			
+						<td>2012	</td><td>"Political economy in the think tank," 16th Annual Conference of the <i>European Society for the History of Economic Thought</i>, 17-19 May.</td>
+				</tr>
+			</table>
+			<div class="cv_subheading">Conference Panels Organized</div>
+			<table class="cv_date_list">
+				<tr>
+					<td>2014	</td><td>"Figuring Expert and Everyday Economies: Representations/Interventions," 113th Annual Meeting of the <i>American Anthropological Association</i>, sponsored by the Society for Economic Anthropology, 3-7 December.</td>
+				</tr>
+				<tr>
+					<td>2013	</td><td>"Technopolitical Futures," 112th Annual Meeting of the <i>American Anthropological Association</i>, sponsored by the Association for Political and Legal Anthropology, 20-24 November.</td>
+				</tr>
+			</table>
+			<div class="cv_subheading">Departmental Talks</div>
+			<table class="cv_date_list">
+				<tr>
+					<td>2015	</td><td>"Dreams in Cybernetic Fugue: The Scientific-Technical Intelligentsia, the Thaw, and Mathematical Economics," Slavic Studies Kruzhok, University of Pennsylvania, <i>University of Pennsylvania</i>, 23 March.</td>
+				</tr>
+				<tr>
+					<td>2013	</td><td>"An impossible science? How hydroelectric engineers, cyberneticists, Orthodox mystics, transport planners, rocket scientists, Stalin, etc., assembled Soviet economics, again,"  Department of Anthropology, <i>University of Pennsylvania</i>, September.</td>
+				</tr>
+			</table>
+		</div>
+		<div class="cv_heading">TEACHING EXPERIENCE</div>
+		<div class="cv_section">
+			<table class="cv_date_list">
+				<tr>
+					<td>2013-2014	</td><td>Unmaking Soviet Life, Instructor, University of Pennsylvania</td>
+				</tr>
+				<tr>
+					<td>2009 	</td><td>East Asian Modernization, Teaching Assistant for Jaesok Kim, University of Pennsylvania</td>
+				</tr>
+				<tr>
+					<td>2008	</td><td>Globalization in Historical Perspective, Teaching Assistant for Brian Spooner, University of Pennsylvania</td>
+				</tr>
+				<tr>
+					<td>2008 	</td><td>The Modern World and Its Cultural Background, Teaching Assistant for Greg Urban, University of Pennsylvania</td>
+				</tr>
+				<tr>
+					<td>2007	</td><td>Globalization in Historical Perspective, Teaching Assistant for Brian Spooner, University of Pennsylvania</td>
+				</tr>
+			</table>
+		</div>
+		<div class="cv_heading">PROFESSIONAL MEMBERSHIPS</div>
+		<div class="cv_section">
+			American Anthropological Association, 2005-present<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;Association for Political and Legal Anthropology<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;Society for Cultural Anthropology<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;Soyuz: Post-Communist Cultural Studies Interest Group<br/>			
+			Social Science History Association, 2013-present<br/>
+			Association for Slavic, Eastern European, and Eurasian Studies, 2012-present<br/>			
+			European Society for the History of Economic Thought, 2012-present
+			History of Economics Society, 2015-present
+		</div>
+		<div class="cv_heading">LANGUAGES</div>
+		<div class="cv_section">
+			Russian, French, German (reading)
+		</div>
+		<div class="cv_heading">REFERENCES</div>
+		<div class="cv_section">
+			<a href="http://www.sas.upenn.edu/anthropology/people/petryna">Adriana Petryna</a><br/>
+			Edmund J. and Louise W. Kahn Term Professor in Anthropology <br/>
+			University of Pennsylvania<br/>
+			Department of Anthropology <br/>
+			University Museum, Rm. 415 <br/>
+			3260 South Street <br/>
+			Philadelphia, PA 19104-6398 <br/>
+			215-746-0423 <br/>
+			<script>
+				<!--
+				var preName = "petryna" 
+				var postName = "sas.upenn.edu"
+				document.write(preName + "@" + postName)
+				//-->
+			</script><br/>
+			<br/>
+			<a href="http://philippebourgois.net">Philippe Bourgois</a><br/>
+			Richard Perry University Professor of Anthropology and Family and Community Medicine <br/>
+			University of Pennsylvania<br/>
+			Department of Anthropology <br/>
+			University Museum, Rm. 334 <br/>
+			3260 South Street <br/>
+			Philadelphia, PA 19104-6398 <br/>
+			215-746-1937 <br/>
+			<script>
+				<!--
+				var preName = "bourgeis" 
+				var postName = "sas.upenn.edu"
+				document.write(preName + "@" + postName)
+				//-->
+			</script><br/>
+			<br/>
+			<a href="https://sites.sas.upenn.edu/jtresch/">John Tresch</a><br/>
+			Associate Professor<br/>
+			Department of History and Sociology of Science<br/>
+			University of Pennsylvania<br/>
+			326 Claudia Cohen Hall <br/>
+			249 S. 36th Street<br/>
+			Philadelphia, PA 19104-6304<br/>
+			<script>
+				<!--
+				var preName = "jtresch" 
+				var postName = "sas.upenn.edu"
+				document.write(preName + "@" + postName)
+				//-->
+			</script><br/>
+			<br/>
+			<a href="https://slavic.princeton.edu/people/faculty/serguei-alex-oushakine">Serguei Alex Oushakine</a><br/>
+			Associate Professor of Slavic Languages and Anthropology<br/>
+			Department of Slavic Languages and Literatures<br/>
+			Princeton University<br/>
+			226 East Pyne<br/>
+			Princeton, NJ 08544<br/>
+			609-258-2385<br/>
+			<script>
+				<!--
+				var preName = "oushakin" 
+				var postName = "princeton.edu"
+				document.write(preName + "@" + postName)
+				//-->
+			</script><br/>
+			<br/>
+			<a href="http://www.stephenjcollier.com/">Stephen J. Collier</a><br/>
+			Associate Professor<br/>
+			Graduate Program in International Affairs<br/>
+			New School University<br/>
+			66 West 12th St Office 612<br/>
+			New York, NY 10011<br/>
+			212-206-3524 x2432<br/>
+			<script>
+				<!--
+				var preName = "colliers" 
+				var postName = "newschool.edu"
+				document.write(preName + "@" + postName)
+				//-->
+			</script><br/>
+			<br/>
+		</div>
+<!-- - - - - - - - - - - - - END CV - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - BEGIN COPYRIGHT STATEMENT - - - - - - - - - - - - -->
+	</div>
+	<div id="copyright">
+		All code written by Adam Leeds is freely available to be re-used. The <a href="http://www.jssor.com">jssor slider</a> is open source. All content is copyright Adam Leeds, and reproduction, syndication, or quotation without attribution is forbidden.
+	</div>
+<!-- - - - - - - - - - - - - END COPYRIGHT STATEMENT - - - - - - - - - - - - -->
+<!-- - - - - - - - - - - - - END CONTENT BOX - - - - - - - - - - - - -->
+</div>
+<!-- - - - - - - - - - - - - END MAIN CONTAINER - - - - - - - - - - - - -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54797421-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

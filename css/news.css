@@ -1,0 +1,73 @@
+body {
+	margin:0px;
+	padding-right:15px;
+	font-family: 'Lato', sans-serif;
+}
+
+
+	
+a {
+	color: black;
+	position: relative;
+	display: inline;
+	text-decoration: none;
+	white-space: pre-wrap; /* css-3 */    
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */    
+    white-space: -o-pre-wrap; /* Opera 7 */    
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+p {
+	margin-top: 0px;
+}
+
+/**************** nav  ****************/
+
+	
+.post {
+}
+
+.post-header {
+	font-size: 0.9em;
+	letter-spacing: -0.5px;
+}
+
+.post-date {
+	color: gray;
+	letter-spacing: -2px;
+}
+
+.post-title {
+	text-decoration: underline solid #59ACFF;
+}
+
+ a {
+	position: relative;
+	display: inline;
+	text-decoration: none;
+	color: black;
+	border-bottom: 2px dotted gray;
+	bottom: 0px;
+}
+
+ a:hover{
+    bottom:0px;
+	border-bottom: 2px solid #59ACFF;
+}
+
+.post-content {
+	box-sizing: border-box;
+	padding: 0px;
+	padding-top: 3px;
+	text-align: justify;
+	font-size: 0.80em;
+	line-height: 120%;
+}
+
+
+
+.rss-subscribe {
+	font-size: 0.8em;
+}
+
