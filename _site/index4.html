@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/base.css" />
 	<script type="text/javascript" src="scripts/main.js"></script>
 	<script type="text/javascript" src="scripts/jquery-2.1.0.min.js"></script>
-	<script type="text/javascript" src="scripts/slider.js"></script>
+	<script type="text/javascript" src="scripts/jssor.slider.mini.js"></script>
 	<script type="text/javascript" src="scripts/jquery.sticky.js"></script>
 	<script>
 	  $(document).ready(function(){
@@ -19,10 +19,9 @@
 </head>
 <!-- - - - - - - - - - - - - BEGIN BODY - - - - - - - - - - - - -->
 <body>
-<div id="main">
 <!-- - - - - - - - - - - - - BEGIN SLIDER - - - - - - - - - - - - -->
     <script>
-        jssor_slider1_starter = function (containerId) {
+        jQuery(document).ready(function ($) {
         	var _SlideshowTransitions = [
             //Fade
             { $Duration: 2200, $Opacity: 2 }
@@ -33,6 +32,7 @@
                 $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
                 $AutoPlayInterval: 3000, 
                 $DragOrientation: 1,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizontal, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+                $PauseOnHover: 0,
               	
               	$SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
                     $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
@@ -50,33 +50,70 @@
                     $Lanes: 1,                                      //[Optional] Specify lanes to arrange items, default value is 1
                     $SpacingX: 0,                                   //[Optional] Horizontal space between each item in pixel, default value is 0
                     $SpacingY: 0,                                   //[Optional] Vertical space between each item in pixel, default value is 0
-                    $Orientation: 1                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                    $Orientation: 1,                                 //[Optional] The orientation of the navigator, 1 horizontal, 2 vertical, default value is 1
+                    $Scale: false
                },
                
             	$ThumbnailNavigatorOptions: {
                     $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
                     $ChanceToShow: 1,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
                     $ActionMode: 0,                                 //[Optional] 0 None, 1 act by click, 2 act by mouse hover, 3 both, default value is 1
-                    $DisableDrag: true                              //[Optional] Disable drag or not, default value is false
+                    $DisableDrag: true,                              //[Optional] Disable drag or not, default value is false
+                    $Scale: false
+
                 }
             };
-            var jssor_slider1 = new $JssorSlider$(containerId, options);
-        };
+            
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+            
+			//responsive code begin
+			//you can remove responsive code if you don't want the slider scales while window resizes
+			function ScaleSlider() {
+				var bodyWidth = document.body.clientWidth;
+				if (bodyWidth)
+					jssor_slider1.$ScaleWidth(bodyWidth);
+				else
+					window.setTimeout(ScaleSlider, 30);
+			}
+			ScaleSlider();
+
+			function ScaleCaptions(){   
+				var bodyWidth = document.body.clientWidth;
+				var widthChange=600/bodyWidth;
+
+				//if(bodyWidth<992){widthChange=widthChange/1.5;}
+
+				//$("#thumbnailwrapper").css("transform","scale("+widthChange+")");
+				//$(".jssorb03").css("transform","scale("+widthChange+")");
+				$("#thumbnailbar").css("width", bodyWidth);
+				//$("#thumbnailwrapper").css("height","30px");
+
+			}
+
+			$(window).bind("load", ScaleSlider);
+			$(window).bind("resize", ScaleSlider);
+			$(window).bind("orientationchange", ScaleSlider);
+			//responsive code end
+			
+			$(window).bind("load", ScaleCaptions);
+			$(window).bind("resize", ScaleCaptions);
+			$(window).bind("orientationchange", ScaleCaptions);
+
+        });
     </script>
-    <!-- Jssor Slider Begin -->
+       <!-- Jssor Slider Begin -->
     <!-- You can move inline styles to css file or css block. -->
-    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
+    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;  overflow: hidden; ">
         <!-- Loading Screen -->
         <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                background-color: #FFFFFF; top: 0px; left: 0px;width: 100%;height:100%;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block; background-color: #FFFFFF; top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
             <div style="position: absolute; display: block; background: url(img/loading.gif) no-repeat center center;
                 top: 0px; left: 0px;width: 100%;height:100%;">
             </div>
         </div>
         <!-- Slides Container -->
-        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px; overflow: hidden;">
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px; max-height: 600px; overflow: hidden;">
             <div>
             	<img u="image" src="img/slider/01.jpg" />
             	<div u="thumb">Riot police at the first protest, December 5th, 2011.</div>
@@ -120,8 +157,8 @@
         </div>
 
 		  <!-- ThumbnailNavigator Skin Begin -->
-        <div u="thumbnavigator" class="sliderb-T" style="position: absolute; bottom: 0px; left: 0px; height:30px; width:600px;">
-            <div style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block; background-color: #000000; top: 0px; left: 0px; width: 100%; height: 100%;">
+        <div id="thumbnailwrapper" u="thumbnavigator" class="sliderb-T" style="position: absolute; bottom: 0px; left: 0px; height:30px; width:600px;">
+            <div id="thumbnailbar" style="filter: alpha(opacity=40); opacity:0.4; position: absolute; display: block; background-color: #000000; top: 0px; left: 0px; width: 100%; height: 100%;">
             </div>
             <!-- Thumbnail Item Skin Begin -->
             <div u="slides">
@@ -170,9 +207,13 @@
     </div>
     <!-- Jssor Slider End -->
 <!-- - - - - - - - - - - - - END SLIDER - - - - - - - - - - - - -->
+	<div id="adamleeds" style="position: absolute; text-align: right; float: right; right: 0px; width: 400px; text-shadow: 0px 0px 10px white;font-family: 'Lato', sans-serif;font-size: 3.5em; border-bottom: none;">Adam E. Leeds</div>
+
+<div id="main" style="min-height: 1000px; margin-top: 0px;">
+
 <!-- - - - - - - - - - - - - BEGIN NAVIGATION - - - - - - - - - - - - -->
 	<div id="navigation">
-		<div id="adamleeds">Adam E. Leeds</div>
+		
 		<div>
 			<a class="nav" onclick="toggle_visibility('about');">About</a> | <a class="nav" onclick="toggle_visibility('research');">Research</a> | <a class="nav" onclick="toggle_visibility('cv');">Curriculum Vitae</a>
 		</div><!--
