@@ -16,6 +16,33 @@
 	  });
 	</script> 
 	<title>Adam E. Leeds</title>
+	<style>
+		.parallax {
+		  perspective: 1px;
+		  height: 100vh;
+		  overflow-x: hidden;
+		  overflow-y: auto;
+		}
+		.parallax__layer {
+		  top: 0;
+		  right: 0;
+		  bottom: 0;
+		  left: 0;
+		}
+		.parallax__layer--base {
+		  transform: translateZ(0);
+		  	background: right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg");
+	background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 750px, rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg"); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(750px,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg"); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 750px,rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg"); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 750px,rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg"); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 750px,rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg"); /* IE10+ */
+	background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 750px,rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg"); /* W3C */
+		}
+		.parallax__layer--back {
+		  transform: translateZ(-1px) scale(2);
+		}
+	</style>
 </head>
 <!-- - - - - - - - - - - - - BEGIN BODY - - - - - - - - - - - - -->
 <body>
@@ -101,6 +128,8 @@
 
         });
     </script>
+    <div class="parallax">
+    <div class="parallax_layer parallax__layer--back">
        <!-- Jssor Slider Begin -->
     <!-- You can move inline styles to css file or css block. -->
     <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;  overflow: hidden; ">
@@ -205,15 +234,17 @@
             jssor_slider1_starter('slider1_container');
         </script>
     </div>
+    </div>
     <!-- Jssor Slider End -->
 <!-- - - - - - - - - - - - - END SLIDER - - - - - - - - - - - - -->
-<div id="adamleeds" style="position: relative; float: right; text-align: right; right: 10px; width: auto; text-shadow: 0px 0px 10px white;font-family: 'Lato', sans-serif;font-size: 3.5em; border-bottom: none;">Adam E. Leeds</div>
-
+	<div class="parallax__layer parallax__layer--base">
+		<div id="adamleeds" style="position: relative; float: right; text-align: right; right: 10px; width: auto; text-shadow: 5px 0px 20px white, 0px 5px 20px white, -5px 0px 20px white, 0px -10px 20px white; font-family: 'Lato', sans-serif;font-size: 3.5em; border-bottom: none;">Adam E. Leeds</div>
+		
 <div id="main" style="min-height: 1000px; margin-top: 0px;">
 
 <!-- - - - - - - - - - - - - BEGIN NAVIGATION - - - - - - - - - - - - -->
 	<div id="navigation">
-		
+		<!--<div id="adamleeds" style="position: relative; width: auto; text-shadow: 0px 0px 10px white;font-family: 'Lato', sans-serif;font-size: 3.5em; border-bottom: none;">Adam E. Leeds</div> -->
 		<div>
 			<a class="nav" onclick="toggle_visibility('about');">About</a> | <a class="nav" onclick="toggle_visibility('research');">Research</a> | <a class="nav" onclick="toggle_visibility('cv');">Curriculum Vitae</a>
 		</div><!--
@@ -274,17 +305,20 @@ The Soviet case is not only the crucial but the best case to understand the inte
 		</div>
 		<div class="cv_section">
 			<a href="http://www.sas.upenn.edu/anthropology/node/145870">University of Pennsylvania</a>, Philadelphia PA<br />
-			Ph. D. in Anthropology, June 2015
-			<table columns="2" style="border: 0px; margin-top: 0px; margin-bottom:5px;">
-				<tr>
-					<td style="width:30%; text-align:right; vertical-align:top;">Dissertation:</td><td style="width:70%">Spectral Liberalisms: On the Subjects of Political Economy in Moscow</td>
-				</tr>
-				<tr>	
-					<td style="width:30%; text-align:right; vertical-align:top;">Committee:</td><td style="width:70%">Adriana Petryna (chair), Philippe Bourgois, John Tresch, Serguei Oushakine (Princeton), Stephen Collier (New School)</td>
-				</tr>
-			</table>
+			Ph. D. in Anthropology, May 2016<br/><br/>
+
 			University of Chicago, Chicago IL<br/>
-			Bachelor of Arts in Philosophy June 2005 
+			Bachelor of Arts with Honors in Philosophy, June 2005 
+		</div>
+		<div class="cv_heading">Professional Appointments</div>
+		<div class="cv_section">
+			<table class="cv_date_list">
+				<tr>	
+						<td>2018–</td><td>Assistant Professor, Columbia University, Department of Slavic Languages</td>
+				</tr>
+				<tr>
+						<td>2016–2018</td><td>Postdoctoral Fellow, Harvard University, Academy for International and Area Studies</td>
+			</table>
 		</div>
 		<div class="cv_heading">Awards and Fellowships</div>
 		<div class="cv_section">
@@ -429,6 +463,12 @@ The Soviet case is not only the crucial but the best case to understand the inte
 		<div class="cv_section">
 			<table class="cv_date_list">
 				<tr>
+					<td>2016	</td><td>Communication and Culture, Instructor, University of Pennsylvania</td>
+				</tr>
+				<tr>
+					<td>2015	</td><td>Globalization and Science Fiction, Instructor, University of Pennsylvania</td>
+				</tr>
+				<tr>
 					<td>2013-2014	</td><td>Unmaking Soviet Life, Instructor, University of Pennsylvania</td>
 				</tr>
 				<tr>
@@ -559,5 +599,7 @@ The Soviet case is not only the crucial but the best case to understand the inte
   ga('create', 'UA-54797421-1', 'auto');
   ga('send', 'pageview');
 </script>
+</div>
+</div>
 </body>
 </html>
