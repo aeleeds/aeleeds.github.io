@@ -48,5 +48,6 @@ function toggle_visibility(target)
      }, 400);
      
      /*$(spacer).css('min-height','');*/
+     
 }
 

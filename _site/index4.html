@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="scripts/jquery-2.1.0.min.js"></script>
 	<script type="text/javascript" src="scripts/jssor.slider.mini.js"></script>
 	<script type="text/javascript" src="scripts/jquery.sticky.js"></script>
+	<script type="text/javascript" src="scripts/jquery.scrollTo.min.js"></script>
 	<script>
 	  $(document).ready(function(){
 		$("#navigation").sticky({topSpacing:-6});
@@ -17,20 +18,46 @@
 	</script> 
 	<title>Adam E. Leeds</title>
 	<style>
+		body { 
+		background: white; 
+		transform: translateZ(0); 
+		transform-style: preserve-3d; 			
+		}
+		body * {
+		-webkit-perspective: 1px;
+		-moz-perspective: 1px;
+		-ms-perspective: 1px;
+		-o-perspective: 1px;
+		perspective: 1px;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-ms-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		transform-style: preserve-3d; 
+    	}
+    
 		.parallax {
 		  perspective: 1px;
 		  height: 100vh;
 		  overflow-x: hidden;
 		  overflow-y: auto;
+		  position: relative;
+		  -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+   			backface-visibility: hidden;
+		
 		}
 		.parallax__layer {
 		  top: 0;
 		  right: 0;
 		  bottom: 0;
 		  left: 0;
+				-webkit-backface-visibility: hidden;
+
+
 		}
 		.parallax__layer--base {
-		  transform: translateZ(0);
+		  transform: translateZ(0px);
+		  background-attachment: scroll;
 		  	background: right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg");
 	background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 750px, rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg"); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,1)), color-stop(750px,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg"); /* Chrome,Safari4+ */
@@ -39,8 +66,11 @@
 	background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 750px,rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg"); /* IE10+ */
 	background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 750px,rgba(255,255,255,0) 100%), right top/auto 100% no-repeat fixed url("http://www.adamleeds.com/img/cemi.jpg"); /* W3C */
 		}
+		
 		.parallax__layer--back {
-		  transform: translateZ(-1px) scale(2);
+		  transform: translateZ(-3px) scale(4) translateY(-45px);
+		  -webkit-transform: translateZ(-4px) scale(5) translateY(-75px);
+		  margin-top: 0px;
 		}
 	</style>
 </head>
@@ -238,13 +268,13 @@
     <!-- Jssor Slider End -->
 <!-- - - - - - - - - - - - - END SLIDER - - - - - - - - - - - - -->
 	<div class="parallax__layer parallax__layer--base">
-		<div id="adamleeds" style="position: relative; float: right; text-align: right; right: 10px; width: auto; text-shadow: 5px 0px 20px white, 0px 5px 20px white, -5px 0px 20px white, 0px -10px 20px white; font-family: 'Lato', sans-serif;font-size: 3.5em; border-bottom: none;">Adam E. Leeds</div>
+		<!--<div id="adamleeds" style="position: relative; float: right; text-align: right; right: 10px; width: auto; text-shadow: 5px 0px 20px white, 0px 5px 20px white, -5px 0px 20px white, 0px -10px 20px white; font-family: 'Lato', sans-serif;font-size: 3.5em; border-bottom: none;">Adam E. Leeds</div>-->
 		
-<div id="main" style="min-height: 1000px; margin-top: 0px;">
+<div id="main" style="min-height: 1000px; margin-top: 0px; position: relative;">
 
 <!-- - - - - - - - - - - - - BEGIN NAVIGATION - - - - - - - - - - - - -->
 	<div id="navigation">
-		<!--<div id="adamleeds" style="position: relative; width: auto; text-shadow: 0px 0px 10px white;font-family: 'Lato', sans-serif;font-size: 3.5em; border-bottom: none;">Adam E. Leeds</div> -->
+		<div id="adamleeds" style="position: relative; width: auto; text-shadow: 0px 0px 10px white;font-family: 'Lato', sans-serif;font-size: 3.5em; border-bottom: none;">Adam E. Leeds</div> 
 		<div>
 			<a class="nav" onclick="toggle_visibility('about');">About</a> | <a class="nav" onclick="toggle_visibility('research');">Research</a> | <a class="nav" onclick="toggle_visibility('cv');">Curriculum Vitae</a>
 		</div><!--
@@ -255,7 +285,7 @@
 <!-- - - - - - - - - - - - - END NAVIGATION - - - - - - - - - - - - -->
 <!-- - - - - - - - - - - - - BEGIN CONTENT BOX - - - - - - - - - - - - -->
 <!-- - - - - - - - - - - - - BEGIN ABOUT - - - - - - - - - - - - -->
-	<div id="about" class="content">
+	<div id="about" class="content" style="display: none;">
 		<iframe src="news.html" width="200px" height="390px" align="left"></iframe>
 		<p>What is it to govern and to be governed in the contemporary situation? I am an anthropologist concerned with political rationalities and technologies of rule. In particular, I am interested in the imagination and assembly of forms of political order that could be understood as liberalisms by means of the forms of knowledge called economics. My current project is a historical ethnography of the mathematical economists of Moscow from the Soviet Union to contemporary Russia. It is draws on twenty months of field research, during which I was based at the <a href="http://www.nes.ru">New Economic School</a> (NES) and <a href="http://www.cemi.rssi.ru/">Central Economic Mathematical Institute</a> (CEMI) of the Russian Academy of Sciences (pictured at right). The genealogy of Moscow economics reveals a point of emergence and elaboration for alternative liberalisms and socialisms that illuminate both the limits and fecundity of the modern political imaginary.</p>
 		<div class="cv_heading" style="padding-top: 15px; padding-bottom: 6px">Contact Information</div>
