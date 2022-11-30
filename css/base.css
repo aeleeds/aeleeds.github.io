@@ -76,7 +76,7 @@ p {
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-size: 0.9em;
+	font-size: 1.0em;
 	font-weight: 800;
 	background-color: white;
 	/*outline: white solid 3px;*/
@@ -152,7 +152,7 @@ div.content {
 	padding: 0px;
 	padding-top: 5px;
 	text-align: justify;
-	font-size: 0.9em;
+	font-size: 1.0em;
 	line-height: 170%;
 }
 
